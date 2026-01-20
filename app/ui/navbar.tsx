@@ -4,18 +4,18 @@ const menunav = ['menu', 'tentang kami', 'organisasi', 'media sosial']
 
 export default function(){
     return (
-        <nav className="bg-linear-to-b from-blue-900 via-blue-900">
-            <div className="mx-auto max-w-7xl px-2 lg:px-8">
-                <div className="relative flex h-20 items-center justify-between">
+        <nav className="bg-linear-to-b from-blue-900 via-blue-900/90 fixed h-24 w-full z-30">
+            <div className="mx-auto max-w-7xl px-4 lg:px-8 h-full">
+                <div className="flex h-full items-center justify-between">
                     
-                    <div className="flex shrink-0 items-center">
+                    <div className="flex items-center">
                         <img 
                             src="img/logo1.png" 
                             alt=""
-                            className="h-16 w-auto m-3" 
+                            className="h-16 w-auto" 
                         />
                     </div>
-                    <div className="flex items-center justify-center gap-3 mx-4">
+                    <div className="flex items-center gap-4 ">
                         {menunav.map((menu,index) => {
                             return(
                                 <div key={index}>

@@ -3,7 +3,7 @@ import { ButtonA, ButtonB } from "./button";
 
 export function HeroParts(){
     return(
-        <section className=" w-full h-full -z-10 overflow-hidden absolute">
+        <section className="w-full h-screen overflow-hidden relative rounded-sm">
 
             {/* Hero Image */}
             <Image 
@@ -11,13 +11,14 @@ export function HeroParts(){
                 alt=""
                 fill
                 className="object-cover"
+                loading="lazy"
             />
 
             {/* Gradasi overlay */}
-            <div className="absolute inset-0 z-10 bg-linear-to-r from-blue-900 via-blue-900/90"></div>
+            <div className="absolute inset-0 bg-linear-to-r from-blue-900 via-blue-900/90"></div>
 
             {/* Konten hero */}
-            <div className="absolute z-20 flex h-full items-center ms-10">
+            <div className="relative z-10 flex h-full items-center ms-10">
                 <div className="max-w-7xl mx-auto px-6 text-white">
                     <h1 className="capitalize text-3xl font-bold leading-9 my-4">
                         kun kal kawung wa la takun kal maung
@@ -30,6 +31,38 @@ export function HeroParts(){
                         <ButtonB/>
                     </div>
                 </div>
+            </div>
+        </section>
+    )
+}
+
+export function AboutUsParts(){
+    return(
+        <section className="my-10 max-w-screen border rounded-sm bg-white">
+            <div className="grid grid-cols-6 gap-2 my-4">
+                <div className="col-start-1 col-end-4 mx-20">
+                    <h2 className="capitalize text-start text-2xl font-semibold text-blue-900 my-4 underline underline-offset-8">
+                        tentang kami
+                    </h2>
+                    <p className="tracking-wide text-md">
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Assumenda aspernatur id nam autem repudiandae, quasi provident ipsa animi eaque ullam sed, ab ad cumque! Rem in asperiores id veritatis laboriosam!
+                    </p>
+                    <p className="tracking-wide mx-4 mt-4 text-md">
+                        <li>Lorem ipsum dolor sit amet.</li>
+                        <li>Lorem ipsum dolor sit amet.</li>
+                        <li>Lorem ipsum dolor sit amet.</li>
+                    </p>
+                </div>
+               
+               <div className="col-start-5 col-end-6">
+                    <Image
+                        src={'/img/aboutus.jpg'}
+                        alt=""
+                        width={300}
+                        height={400}
+                        className="rounded-sm"
+                    />
+               </div>
             </div>
         </section>
     )

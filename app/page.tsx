@@ -1,22 +1,17 @@
-import Image from "next/image";
 import Navbar from "./ui/navbar";
-import { HeroParts } from "./ui/parts";
+import { AboutUsParts, HeroParts } from "./ui/parts";
 
 export default function Home() {
   return (
-    <div className="font-sans dark:bg-black">
-      <div className="">
-        {/* Navbar */}
-        <div className="h-24 w-full fixed">
-          <Navbar/>
-        </div>
+    <div className="font-sans dark:bg-black bg-gray-300">
+      {/* Navbar */}
+      <Navbar/>
 
-        {/* Hero Parts */}
-        <div className="">
-          <HeroParts/>
-        </div>
+      {/* Hero Parts */}
+      <HeroParts/>
 
-      </div>
+      {/* body */}
+      <AboutUsParts/>
       
     </div>
   );
