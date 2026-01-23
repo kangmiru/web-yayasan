@@ -1,5 +1,5 @@
   import Navbar from "./ui/navbar";
-import { AboutUsParts, HeroParts, OrganitationParts } from "./ui/parts";
+import { AboutUsParts, HeroParts, OrganitationParts, SocialMediaParts } from "./ui/parts";
 
 export default function Home() {
   return (
@@ -16,6 +16,9 @@ export default function Home() {
 
       {/* organisasi */}
       <OrganitationParts/>
+
+      {/* sosmed */}
+      <SocialMediaParts/>
     </div>
   );
 }

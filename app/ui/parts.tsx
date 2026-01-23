@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { ButtonA, ButtonB } from "./button";
-import { OrganisationList } from "./organisation";
+import { OrganisationList, SocialMediaList } from "./cards";
 
 export function HeroParts(){
     return(
@@ -85,6 +85,16 @@ export function OrganitationParts(){
 
             <div className="mb-5">
                 <OrganisationList/>
+            </div>
+        </section>
+    )
+}
+
+export function SocialMediaParts(){
+    return(
+        <section className="my-10 max-w-screen rounded-sm bg-white border border-black/10 shadow-sm backdrop-blur-2xl">
+            <div className="m-5">
+                <SocialMediaList/>
             </div>
         </section>
     )
