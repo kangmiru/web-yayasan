@@ -1,9 +1,9 @@
   import Navbar from "./ui/navbar";
-import { AboutUsParts, HeroParts, OrganitationParts, SocialMediaParts } from "./ui/parts";
+import { AboutUsParts, FooterParts, HeroParts, OrganitationParts, SocialMediaParts } from "./ui/parts";
 
 export default function Home() {
   return (
-    <div className="font-sans dark:bg-black bg-gray-100 mb-5">
+    <div className="font-sans dark:bg-black bg-gray-100 mb-5 w-screen">
       {/* Navbar */}
       <Navbar/>
 
@@ -19,6 +19,9 @@ export default function Home() {
 
       {/* sosmed */}
       <SocialMediaParts/>
+
+      {/* footer */}
+      <FooterParts/>
     </div>
   );
 }

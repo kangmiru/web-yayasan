@@ -88,7 +88,10 @@ export function SocialMediaList(){
         <div className="grid grid-cols-3 mx-5 gap-5">
             {social_media.map((media, index) =>{
                 return(
-                    <div className={`bg-white border border-black/10 shadow-sm backdrop-blur-2xl rounded-md`}>
+                    <div
+                        key={index} 
+                        className={`bg-white border border-black/10 shadow-sm backdrop-blur-2xl rounded-md`}
+                    >
                         <div className="flex my-4 items-center justify-center gap-5" >
                             <Image
                                 src={media.logo}

@@ -19,7 +19,7 @@ export default function(){
 
     return (
         <nav 
-            className={`fixed h-24 w-full z-30 top-0 left-0 transition-all duration-300 ${
+            className={`fixed h-24 w-full z-30 top-0 left-0 transition-all duration-300 rounded-b-sm ${
                 scrolled
                     ? "bg-blue-900 shadow-md backdrop-blur-md"
                     : "bg-linear-to-b from-blue-900 via-blue-900/90"

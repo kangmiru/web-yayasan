@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { ButtonA, ButtonB } from "./button";
 import { OrganisationList, SocialMediaList } from "./cards";
+import { ContactUs } from "./contact";
 
 export function HeroParts(){
     return(
@@ -50,11 +51,11 @@ export function AboutUsParts(){
                     <p className="tracking-wide text-md">
                         Lorem ipsum dolor sit, amet consectetur adipisicing elit. Assumenda aspernatur id nam autem repudiandae, quasi provident ipsa animi eaque ullam sed, ab ad cumque! Rem in asperiores id veritatis laboriosam!
                     </p>
-                    <p className="tracking-wide mx-4 mt-4 text-md">
+                    <ul className="tracking-wide mx-4 mt-4 text-md">
                         <li>Lorem ipsum dolor sit amet.</li>
                         <li>Lorem ipsum dolor sit amet.</li>
                         <li>Lorem ipsum dolor sit amet.</li>
-                    </p>
+                    </ul>
                 </div>
                
                <div className="col-start-5 col-end-6">
@@ -95,6 +96,34 @@ export function SocialMediaParts(){
         <section className="my-10 max-w-screen rounded-sm bg-white border border-black/10 shadow-sm backdrop-blur-2xl">
             <div className="m-5">
                 <SocialMediaList/>
+            </div>
+        </section>
+    )
+}
+
+export function FooterParts(){
+    return (
+        <section className="mt-10 max-w-screen rounded-sm bg-blue-900 border border-black/10 shadow-sm backdrop-blur-2xl">
+            <div className="grid grid-cols-4 m-5 gap-3">
+                <div>
+                    <Image
+                        src={'/img/logo1.png'}
+                        alt=""
+                        width={200}
+                        height={100}
+                        className="flex items-center justify-center mx-auto"
+                    />
+
+                    <hr className="text-white my-3"/>
+
+                    <p className="text-white mx-3">
+                        Kp. Ciburial 03/10, Desa Alamendah, Kec.Rancabali, Kab. Bandung, Jawa Barat
+                    </p>
+                </div>
+
+                {/* kontak */}
+                <ContactUs/>
+
             </div>
         </section>
     )
