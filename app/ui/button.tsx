@@ -1,5 +1,8 @@
 'use client'
 
+import Link from "next/link"
+import { usePathname } from "next/navigation"
+
 interface NavButtonProps {
     title: string
     link: string
@@ -7,10 +10,16 @@ interface NavButtonProps {
 }
 
 export function NavButton({title, link, slug}:NavButtonProps){
+    const pathname = usePathname()
     return (
-        <button className="text-white capitalize hover:bg-blue-700 rounded-md font-semibold">
-            <div className="m-3">{title}</div>
-        </button>
+        <Link href={link}>
+            <button className={`text-white capitalize hover:bg-blue-700 rounded-md font-semibold ${pathname === link
+                ? 'bg-blue-700/70 border border-blue-600'
+                : ''
+            }`}>
+                <p className="m-3">{title}</p>
+            </button>
+        </Link>
     )
 }
 

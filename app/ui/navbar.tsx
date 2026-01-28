@@ -2,11 +2,30 @@
 
 import { useEffect, useState } from "react";
 import { NavButton } from "./button";
+import { usePathname } from "next/navigation";
 
-const menunav = ['menu', 'tentang kami', 'organisasi', 'media sosial']
+const menunav = [
+    {
+        menu: 'beranda',
+        link: '/',
+    },
+    {
+        menu: 'tentang kami',
+        link: '/about-us',
+    },
+    {
+        menu: 'organisasi',
+        link: '/organisation',
+    },
+    {
+        menu: 'media sosial',
+        link: '/medsos',
+    },
+]
 
 export default function(){
     const [scrolled, setScrolled] = useState<boolean>(false)
+    const pathname = usePathname()
 
     useEffect(() : (() => void) => {
         const handleScroll = ():void => {
@@ -20,7 +39,7 @@ export default function(){
     return (
         <nav 
             className={`fixed h-24 w-full z-30 top-0 left-0 transition-all duration-300 rounded-b-sm ${
-                scrolled
+                scrolled || pathname !== '/'
                     ? "bg-blue-900 shadow-md backdrop-blur-md"
                     : "bg-linear-to-b from-blue-900 via-blue-900/90"
             }`}
@@ -39,7 +58,7 @@ export default function(){
                         {menunav.map((menu,index) => {
                             return(
                                 <div key={index}>
-                                    <NavButton title={menu} slug="" link=""/>
+                                    <NavButton title={menu.menu} slug="" link={menu.link}/>
                                 </div>
                             )
                         })}
