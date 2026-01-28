@@ -3,7 +3,7 @@ import { AboutUsParts, FooterParts, HeroParts, OrganitationParts, SocialMediaPar
 
 export default function Home() {
   return (
-    <div className="font-sans dark:bg-black bg-gray-100 mb-5 w-screen">
+    <div className="font-sans dark:bg-black bg-sky-100 mb-5 w-screen">
       {/* Navbar */}
       <Navbar/>
 

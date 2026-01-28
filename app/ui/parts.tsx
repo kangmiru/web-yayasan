@@ -3,7 +3,7 @@
 import Image from "next/image";
 import { ButtonA, ButtonB } from "./button";
 import { OrganisationList, SocialMediaList } from "./cards";
-import { ContactUs } from "./contact";
+import { ContactUs, SendMessage } from "./contact";
 
 export function HeroParts(){
     return(
@@ -74,7 +74,7 @@ export function AboutUsParts(){
 
 export function OrganitationParts(){
     return(
-        <section className="my-10 max-w-screen rounded-sm bg-gray-100/10 border border-black/10 shadow-sm backdrop-blur-2xl">
+        <section className="my-10 max-w-screen rounded-sm bg-gray-100/50 border border-black/10 shadow-sm backdrop-blur-2xl">
             <div className="w-screen mt-5">
                 <h2 className="capitalize text-2xl text-center font-semibold text-blue-900 underline underline-offset-8 decoration-green-700">
                     sekolah/organisasi di bawah naungan kami
@@ -104,8 +104,8 @@ export function SocialMediaParts(){
 export function FooterParts(){
     return (
         <section className="mt-10 max-w-screen rounded-sm bg-blue-900 border border-black/10 shadow-sm backdrop-blur-2xl">
-            <div className="grid grid-cols-4 m-5 gap-3">
-                <div>
+            <div className="grid grid-cols-3 m-5 gap-3">
+                <div className="mx-3">
                     <Image
                         src={'/img/logo1.png'}
                         alt=""
@@ -123,6 +123,9 @@ export function FooterParts(){
 
                 {/* kontak */}
                 <ContactUs/>
+
+                {/* Message */}
+                <SendMessage/>
 
             </div>
         </section>

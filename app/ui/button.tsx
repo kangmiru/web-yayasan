@@ -33,3 +33,13 @@ export function ButtonB(){
         </button>
     )
 }
+
+export function ButtonC(){
+    return(
+        <button className= "bg-linear-to-t from-green-700/70 to-green-500 w-full rounded-md">
+            <p className="text-white font-bold capitalize m-3">
+                Kirim pesan ke admin
+            </p>
+        </button>
+    )
+}
