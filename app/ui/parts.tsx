@@ -93,7 +93,7 @@ export function OrganitationParts(){
 
 export function SocialMediaParts(){
     return(
-        <section className="my-10 max-w-screen rounded-sm bg-white border border-black/10 shadow-sm backdrop-blur-2xl">
+        <section className="mt-10 max-w-screen rounded-sm bg-white border border-black/10 shadow-sm backdrop-blur-2xl">
             <div className="m-5">
                 <SocialMediaList/>
             </div>
@@ -103,7 +103,7 @@ export function SocialMediaParts(){
 
 export function FooterParts(){
     return (
-        <section className="mt-10 max-w-screen rounded-sm bg-blue-900 border border-black/10 shadow-sm backdrop-blur-2xl">
+        <section className="max-w-screen rounded-sm bg-blue-900 border border-black/10 shadow-sm backdrop-blur-2xl">
             <div className="grid grid-cols-3 m-5 gap-3">
                 <div className="mx-3">
                     <Image
