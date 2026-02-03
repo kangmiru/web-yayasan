@@ -23,6 +23,29 @@ const values = [
     },
 ]
 
+const teams =[
+    {
+        foto:'/img/profile.jpg',
+        name: 'Lorem, ipsum.',
+        position: 'pendiri'
+    },
+    {
+        foto:'/img/profile.jpg',
+        name: 'Lorem, ipsum.',
+        position: 'pendiri'
+    },
+    {
+        foto:'/img/profile.jpg',
+        name: 'Lorem, ipsum.',
+        position: 'pendiri'
+    },
+    {
+        foto:'/img/profile.jpg',
+        name: 'Lorem, ipsum.',
+        position: 'pendiri'
+    },
+]
+
 interface VisiMisiProps {
     logo: string
     title: string
@@ -57,18 +80,52 @@ export function Values(){
                 return (
                     <div
                         key={index}
-                        className="flex justify-center"
+                        className="flex justify-center my-5"
                     >
-                        <div className="grid grid-rows-2">
+                        <div className="grid grid-rows-2 gap-5">
                             <Icon 
                                 size={75}
-                                className="m-5 flex justify-center items-center"
+                                className="mx-auto"
                             />
 
-                            <h3 className="uppercase text-lg font-semibold">
+                            <h3 className="uppercase text-lg font-semibold text-center">
                                 {value.title}
                             </h3>
                         </div>
+                    </div>
+                )
+            })}
+        </div>
+    )
+}
+
+export function TeamCards(){
+    return (
+        <div className="grid grid-cols-4 mx-10">
+            {teams.map((team,index)=> {
+                return(
+                    <div
+                        key={index}
+                        className="grid"
+                    >
+                        <Image
+                            src={team.foto}
+                            alt=""
+                            height={200}
+                            width={200}
+                            className="rounded-full mx-auto my-5"
+                        />
+
+                        <div className="mt-5 text-center">
+                            <h3 className="uppercase text-lg font-semibold">
+                                {team.name}
+                            </h3>
+                            
+                            <p className="mt-3 capitalize font-medium text-gray-500">
+                                {team.position}
+                            </p>
+                        </div>
+
                     </div>
                 )
             })}

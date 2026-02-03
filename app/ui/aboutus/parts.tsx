@@ -1,5 +1,6 @@
 import Image from "next/image"
-import { Values, VisiMisi } from "./cards"
+import { TeamCards, Values, VisiMisi } from "./cards"
+import { TitleAboutUs } from "../title"
 
 const timelineData = [
     {
@@ -48,9 +49,7 @@ const visiMisi = [
 export function DraftAboutUs(){
     return(
         <div className="w-full">
-            <h2 className="capitalize text-2xl font-bold text-blue-900 mb-5 pt-10 mx-14">
-                siapa kami
-            </h2>
+            <TitleAboutUs title="siapa kami" />
             <div className="flex flex-cols-2 ">
                 <div className="mx-10 rounded-md indent-4 text-justify justify-center">
                     <p>
@@ -115,10 +114,21 @@ export function VisiMisiParts(){
 export function OurValuesParts(){
     return (
         <div className="m-5">
-            <h2 className="capitalize text-2xl font-bold text-blue-900 my-5 pt-10 mx-14">
-                Nilai-nilai Kami
-            </h2>
+            <TitleAboutUs 
+                title="nilai-nilai kami"
+            />
+
             <Values/>
+        </div>
+    )
+}
+
+export function FounderTeamParts(){
+    return (
+        <div className="mx-5 mt-5 mb-10">
+            <TitleAboutUs title="pendiri & tim inti" />
+
+            <TeamCards/>
         </div>
     )
 }
