@@ -1,11 +1,11 @@
-import Image from "next/image";
-import { DraftAboutUs, TimelineParts, } from "../ui/aboutus/parts";
+import { DraftAboutUs, OurValuesParts, } from "../ui/aboutus/parts";
 
 export default function Page(){
     return(
-        <div className="w-screen h-screen mt-20">
+        <div className="w-screen my-20">
             <DraftAboutUs/>
 
+            <OurValuesParts/>
         </div>
     )
 }

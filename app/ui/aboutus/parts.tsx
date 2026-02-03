@@ -1,3 +1,6 @@
+import Image from "next/image"
+import { Values, VisiMisi } from "./cards"
+
 const timelineData = [
     {
         year:'1990',
@@ -29,6 +32,19 @@ const timelineData = [
     },
 ]
 
+const visiMisi = [
+    {
+        logo:'/img/visi.png',
+        title: 'visi kami',
+        text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda sint, saepe voluptatibus repudiandae rerum odio?',
+    },
+    {
+        logo:'/img/misi.png',
+        title: 'misi kami',
+        text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda sint, saepe voluptatibus repudiandae rerum odio?',
+    },
+]
+
 export function DraftAboutUs(){
     return(
         <div className="w-full">
@@ -45,7 +61,7 @@ export function DraftAboutUs(){
                     </p>
                     <VisiMisiParts /> 
                 </div>
-                <div className="mx-5 w-full flex items-center justify-center mb-5">
+                <div className="mx-5 w-full justify-center mb-5">
                     <TimelineParts/>
                 </div>
             </div>
@@ -82,8 +98,27 @@ export function TimelineParts(){
 export function VisiMisiParts(){
     return(
         <div className="grid grid-cols-2 justify-center items-center text-center my-5">
-            <div>Ini visi</div>
-            <div>Ini misi</div>
+            {visiMisi.map((vm, index) =>{
+                return (
+                    <VisiMisi 
+                        key={index}
+                        logo={vm.logo}
+                        title={vm.title}
+                        text={vm.text}
+                    />
+                )
+            })}
+        </div>
+    )
+}
+
+export function OurValuesParts(){
+    return (
+        <div className="m-5">
+            <h2 className="capitalize text-2xl font-bold text-blue-900 my-5 pt-10 mx-14">
+                Nilai-nilai Kami
+            </h2>
+            <Values/>
         </div>
     )
 }
