@@ -1,5 +1,5 @@
 import Image from "next/image"
-import { TeamCards, Values, VisiMisi } from "./cards"
+import { GraduateCards, TeamCards, Values, VisiMisi } from "./cards"
 import { TitleAboutUs } from "../title"
 
 const timelineData = [
@@ -129,6 +129,16 @@ export function FounderTeamParts(){
             <TitleAboutUs title="pendiri & tim inti" />
 
             <TeamCards/>
+        </div>
+    )
+}
+
+export function GraduationsParts(){
+    return (
+        <div className="mx-5 mt-5 mb-10">
+            <TitleAboutUs title="lulusan madrasah kami" />
+
+            <GraduateCards />
         </div>
     )
 }

@@ -46,6 +46,25 @@ const teams =[
     },
 ]
 
+const graduates = [
+    {
+        total : 500,
+        info: 'jumlah lulusan',
+    },
+    {
+        total : 500,
+        info: 'melanjutkan keperguruan tinggi negeri',
+    },
+    {
+        total : 500,
+        info: 'melanjutkan keperguruan tinggi swasta',
+    },
+    {
+        total : 500,
+        info: 'siswa aktif',
+    },
+]
+
 interface VisiMisiProps {
     logo: string
     title: string
@@ -126,6 +145,28 @@ export function TeamCards(){
                             </p>
                         </div>
 
+                    </div>
+                )
+            })}
+        </div>
+    )
+}
+
+export function GraduateCards(){
+    return (
+        <div className="grid grid-cols-4 gap-3 mx-10">
+            {graduates.map((grad,index) => {
+                return (
+                    <div 
+                        key={index}
+                        className="grid mx-auto text-center items-center"
+                    >
+                        <span className="text-4xl font-extrabold tracking-wider">
+                            {grad.total}
+                        </span>
+                        <p className="mt-5 capitalize text-md mx-5 font-bold">
+                            {grad.info}
+                        </p>
                     </div>
                 )
             })}

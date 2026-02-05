@@ -1,4 +1,4 @@
-import { DraftAboutUs, FounderTeamParts, OurValuesParts, } from "../ui/aboutus/parts";
+import { DraftAboutUs, FounderTeamParts, GraduationsParts, OurValuesParts, } from "../ui/aboutus/parts";
 
 export default function Page(){
     return(
@@ -8,6 +8,8 @@ export default function Page(){
             <OurValuesParts/>
 
             <FounderTeamParts />
+
+            <GraduationsParts/>
         </div>
     )
 }
