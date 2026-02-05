@@ -2,7 +2,7 @@ import { AboutUsParts, FooterParts, HeroParts, OrganitationParts, SocialMediaPar
 
 export default function Home() {
   return (
-    <div className="font-sans dark:bg-black bg-sky-100 pb-5 w-screen">
+    <div className="font-sans dark:bg-black bg-sky-100 pb-5 max-w-screen">
       {/* Hero Parts */}
       <HeroParts/>
 

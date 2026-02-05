@@ -48,7 +48,7 @@ const visiMisi = [
 
 export function DraftAboutUs(){
     return(
-        <div className="w-screen">
+        <div className="max-w-screen">
             <TitleTypeC title="siapa kami" />
             
             <div className="flex flex-cols-2 ">

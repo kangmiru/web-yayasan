@@ -8,7 +8,7 @@ import { TitleTypeA, TitleTypeB } from "./title";
 
 export function HeroParts(){
     return(
-        <section className="w-full h-screen overflow-hidden relative rounded-sm">
+        <section className="max-w-screen h-screen overflow-hidden relative rounded-sm">
 
             {/* Hero Image */}
             <Image 
@@ -75,7 +75,7 @@ export function AboutUsParts(){
 export function OrganitationParts(){
     return(
         <section className="my-10 max-w-screen rounded-sm bg-gray-100/50 border border-black/10 shadow-sm backdrop-blur-2xl">
-            <div className="w-screen mt-5">
+            <div className="w-full mt-5">
                 <TitleTypeB title="sekolah/organisasi di bawah naungan kami"/>
                 
                 <p className="my-5 text-md text-center font-medium">
