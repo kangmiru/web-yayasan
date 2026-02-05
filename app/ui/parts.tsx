@@ -32,7 +32,7 @@ export function HeroParts(){
                         Jadilah seperti kawung yang semua bagiannya dapat dimanfaatkan dan janganlah seperti macan yang hanya ditakuti dan tidak memberikan manfaat apapun
                     </p>
                     <div className="my-4 flex flex-col-2 gap-5">
-                        <ButtonA/>
+                        <ButtonA title="donasi sekarang" link=""/>
                         <ButtonB/>
                     </div>
                 </div>

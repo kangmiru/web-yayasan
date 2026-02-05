@@ -9,6 +9,11 @@ interface NavButtonProps {
     slug: string
 }
 
+interface ButtonProps {
+    title:string
+    link:string
+}
+
 export function NavButton({title, link, slug}:NavButtonProps){
     const pathname = usePathname()
     return (
@@ -23,11 +28,13 @@ export function NavButton({title, link, slug}:NavButtonProps){
     )
 }
 
-export function ButtonA(){
+export function ButtonA({title, link}: ButtonProps){
     return(
-        <button className="text-white capitalize bg-blue-800 rounded-md filter drop-shadow-2xl hover:bg-transparent hover:border hover:border-b-2 hover:border-white">
+        <button className="text-white capitalize bg-blue-800 rounded-md border border-transparent shadow-lg transition-all duration-200 ease-in-out hover:bg-transparent hover:border-white hover:text-sky-500 hover:shadow-inner hover:translate-y-px active:translate-y-0.5 active:shadow-inner">
             <div className="m-3">
-                <p className="font-semibold tracking-wide">donasi sekarang</p>
+                <Link href={link}>
+                    <p className="font-semibold tracking-wide">{title}</p>
+                </Link>
             </div>
         </button>
     )
@@ -37,7 +44,9 @@ export function ButtonB(){
     return(
         <button className="text-white capitalize bg-transparent rounded-md border border-b-2 border-white hover:bg-blue-800 hover:rounded-md hover:filter hover:drop-shadow-2xl hover:border-none">
             <div className="m-3">
-                <p className="font-semibold tracking-wide">pelajari lebih lanjut</p>
+                <Link href={''}>
+                    <p className="font-semibold tracking-wide">pelajari lebih lanjut</p>
+                </Link>
             </div>
         </button>
     )
@@ -49,6 +58,18 @@ export function ButtonC(){
             <p className="text-white font-bold capitalize m-3">
                 Kirim pesan ke admin
             </p>
+        </button>
+    )
+}
+
+export function ButtonD({title, link}:ButtonProps){
+    return(
+        <button className="rounded-md bg-white border border-black/10 shadow-sm backdrop-blur-2xl transition-all duration-150 ease-in-out hover:shadow-inner hover:translate-y-px active:translate-y-0.5 active:shadow-inner">
+            <div className="m-3">
+                <Link href={link} className="font-semibold tracking-wide capitalize">
+                    {title}
+                </Link>
+            </div>
         </button>
     )
 }
