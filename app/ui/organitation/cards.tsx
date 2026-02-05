@@ -1,5 +1,6 @@
 import { FaChalkboardTeacher } from "react-icons/fa"
 import { FaLocationDot } from "react-icons/fa6"
+import { MdOutlineMuseum, MdOutlineWbSunny, MdOutlineExplore, MdOutlineCelebration } from "react-icons/md"
 import { PiStudent } from "react-icons/pi"
 
 const informations = [
@@ -17,6 +18,25 @@ const informations = [
         title: 'jumlah siswa',
         info: '600',
         icon: PiStudent,
+    },
+]
+
+const programs = [
+    {
+        title: 'mulok',
+        icon: MdOutlineMuseum ,
+    },
+    {
+        title: 'sholat dhuha',
+        icon: MdOutlineWbSunny ,
+    },
+    {
+        title: 'PBL',
+        icon: MdOutlineExplore ,
+    },
+    {
+        title: 'Perayaan',
+        icon: MdOutlineCelebration,
     },
 ]
 
@@ -42,6 +62,30 @@ export function Information(){
                                 {info.info}
                             </p>
                         </div>
+                    </div>
+                )
+            })}
+        </div>
+    )
+}
+
+export function ProgramCards(){
+    return (
+        <div className="grid grid-cols-4 my-5 gap-3">
+            {programs.map((prg, index) => {
+                const Icon = prg.icon
+                return (
+                    <div
+                        key={index}
+                        className="mx-auto my-5"
+                    >
+                        <Icon 
+                            size={50}
+                            className="mx-auto mb-5"
+                        />
+                        <h3 className="capitalize text-lg font-semibold text-center">
+                            {prg.title}
+                        </h3>
                     </div>
                 )
             })}

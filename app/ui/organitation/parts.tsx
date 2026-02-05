@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { ButtonA, ButtonD } from "../button";
 import { TitleTypeD } from "../title";
-import { Information } from "./cards";
+import { Information, ProgramCards } from "./cards";
 import { InformationText } from "./text";
 
 export function AboutSchool(){
@@ -30,6 +30,19 @@ export function AboutSchool(){
                     <Information/>
                 </div>
             </div>
+
+        </div>
+    )
+}
+
+export function ProgramParts(){
+    return (
+        <div className="m-10">
+            <div className="text-center">
+                <TitleTypeD title="program unggulan madrasah"/>
+            </div>
+
+            <ProgramCards/>
 
         </div>
     )
