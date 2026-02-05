@@ -4,6 +4,7 @@ import Image from "next/image";
 import { ButtonA, ButtonB } from "./button";
 import { OrganisationList, SocialMediaList } from "./cards";
 import { ContactUs, SendMessage } from "./contact";
+import { TitleTypeA, TitleTypeB } from "./title";
 
 export function HeroParts(){
     return(
@@ -45,9 +46,8 @@ export function AboutUsParts(){
         <section className="my-10 max-w-screen rounded-sm bg-white border border-black/10 shadow-sm backdrop-blur-2xl">
             <div className="grid grid-cols-6 gap-2 my-4">
                 <div className="col-start-1 col-end-4 mx-20">
-                    <h2 className="capitalize text-start text-2xl font-semibold text-blue-900 my-4 underline underline-offset-8">
-                        tentang kami
-                    </h2>
+                    <TitleTypeA title="tentang kami"/>
+
                     <p className="tracking-wide text-md">
                         Lorem ipsum dolor sit, amet consectetur adipisicing elit. Assumenda aspernatur id nam autem repudiandae, quasi provident ipsa animi eaque ullam sed, ab ad cumque! Rem in asperiores id veritatis laboriosam!
                     </p>
@@ -76,9 +76,8 @@ export function OrganitationParts(){
     return(
         <section className="my-10 max-w-screen rounded-sm bg-gray-100/50 border border-black/10 shadow-sm backdrop-blur-2xl">
             <div className="w-screen mt-5">
-                <h2 className="capitalize text-2xl text-center font-semibold text-blue-900 underline underline-offset-8 decoration-green-700">
-                    sekolah/organisasi di bawah naungan kami
-                </h2>
+                <TitleTypeB title="sekolah/organisasi di bawah naungan kami"/>
+                
                 <p className="my-5 text-md text-center font-medium">
                     Ini adalah organisasi yang bergerak bersama kami.
                 </p>

@@ -1,6 +1,6 @@
 import Image from "next/image"
 import { GraduateCards, TeamCards, Values, VisiMisi } from "./cards"
-import { TitleAboutUs } from "../title"
+import { TitleTypeC } from "../title"
 
 const timelineData = [
     {
@@ -48,8 +48,9 @@ const visiMisi = [
 
 export function DraftAboutUs(){
     return(
-        <div className="w-full">
-            <TitleAboutUs title="siapa kami" />
+        <div className="w-screen">
+            <TitleTypeC title="siapa kami" />
+            
             <div className="flex flex-cols-2 ">
                 <div className="mx-10 rounded-md indent-4 text-justify justify-center">
                     <p>
@@ -114,7 +115,7 @@ export function VisiMisiParts(){
 export function OurValuesParts(){
     return (
         <div className="m-5">
-            <TitleAboutUs 
+            <TitleTypeC
                 title="nilai-nilai kami"
             />
 
@@ -126,7 +127,7 @@ export function OurValuesParts(){
 export function FounderTeamParts(){
     return (
         <div className="mx-5 mt-5 mb-10">
-            <TitleAboutUs title="pendiri & tim inti" />
+            <TitleTypeC title="pendiri & tim inti" />
 
             <TeamCards/>
         </div>
@@ -136,7 +137,7 @@ export function FounderTeamParts(){
 export function GraduationsParts(){
     return (
         <div className="mx-5 mt-5 mb-10">
-            <TitleAboutUs title="lulusan madrasah kami" />
+            <TitleTypeC title="lulusan madrasah kami" />
 
             <GraduateCards />
         </div>

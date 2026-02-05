@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import { NavButton } from "./button";
 import { usePathname } from "next/navigation";
+import Link from "next/link";
 
 const menunav = [
     {
@@ -15,7 +16,7 @@ const menunav = [
     },
     {
         menu: 'organisasi',
-        link: '/organisation',
+        link: '/organitation',
     },
     {
         menu: 'media sosial',
@@ -23,8 +24,9 @@ const menunav = [
     },
 ]
 
-export default function(){
+export default function Navbar(){
     const [scrolled, setScrolled] = useState<boolean>(false)
+    const [open, setOpen] = useState(false)
     const pathname = usePathname()
 
     useEffect(() : (() => void) => {
@@ -38,7 +40,7 @@ export default function(){
 
     return (
         <nav 
-            className={`fixed h-24 w-full z-30 top-0 left-0 transition-all duration-300 rounded-b-sm ${
+            className={`fixed h-24 w-screen z-30 top-0 left-0 transition-all duration-300 rounded-b-sm ${
                 scrolled || pathname !== '/'
                     ? "bg-blue-900 shadow-md backdrop-blur-md"
                     : "bg-linear-to-b from-blue-900 via-blue-900/90"
