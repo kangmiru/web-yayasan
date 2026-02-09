@@ -1,4 +1,5 @@
-import { AboutSchool, ProgramParts } from "../ui/organitation/parts";
+import { AboutSchool, ProgramParts } from "@/app/ui/organitation/parts";
+
 
 export default function Page(){
     return (

@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import { NavButton } from "./button";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
+import { NavDropdown } from "./dropdown";
 
 const menunav = [
     {
@@ -24,9 +25,23 @@ const menunav = [
     },
 ]
 
+const organitations = [
+    {
+        label: 'Madrasah Ibtidaiyah (MI)',
+        link: '/organitation/MI',
+    },
+    {
+        label: 'Madrasah Tsanawiyah (MTs)',
+        link: '/organitation/MTs',
+    },
+    {
+        label: 'Madrasah Ibtidaiyah (MA)',
+        link: '/organitation/MA',
+    },
+]
+
 export default function Navbar(){
     const [scrolled, setScrolled] = useState<boolean>(false)
-    const [open, setOpen] = useState(false)
     const pathname = usePathname()
 
     useEffect(() : (() => void) => {
@@ -58,6 +73,17 @@ export default function Navbar(){
                     </div>
                     <div className="flex items-center gap-4 ">
                         {menunav.map((menu,index) => {
+                            if (menu.menu === 'organisasi') {
+                                return (
+                                    <NavDropdown
+                                        key={index}
+                                        title={menu.menu}
+                                        link={menu.link}
+                                        items={organitations}
+                                    />
+                                )
+                            }
+
                             return(
                                 <div key={index}>
                                     <NavButton title={menu.menu} slug="" link={menu.link}/>
