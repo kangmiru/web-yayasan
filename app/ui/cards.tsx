@@ -9,24 +9,32 @@ const sekolah = [
         tingkat: 'Pendidikan setingkat SD/MI',
         visi: 'dengan pendidikan yang islami mencetak siswa-siswi yang mandiri dan berbudi pekerti luhur',
         logo: '/img/logo2.png',
+        link: '/organitation/ra',
+        foto: '',
     },
     {
         madrasah: 'MI Alif Al-ittifaq',
         tingkat: 'Pendidikan setingkat SD/MI',
         visi: 'dengan pendidikan yang islami mencetak siswa-siswi yang mandiri dan berbudi pekerti luhur',
         logo: '/img/logo2.png',
+        link: '/organitation/mi',
+        foto: '',
     },
     {
         madrasah: 'MTs Alif Al-ittifaq',
         tingkat: 'Pendidikan setingkat SD/MI',
         visi: 'dengan pendidikan yang islami mencetak siswa-siswi yang mandiri dan berbudi pekerti luhur',
         logo: '/img/logo2.png',
+        link: '/organitation/mts',
+        foto: '',
     },
     {
         madrasah: 'MA Alif Al-ittifaq',
         tingkat: 'Pendidikan setingkat SD/MI',
         visi: 'dengan pendidikan yang islami mencetak siswa-siswi yang mandiri dan berbudi pekerti luhur',
         logo: '/img/logo2.png',
+        link: '/organitation/ma',
+        foto: '',
     },
 ]
 
@@ -117,6 +125,39 @@ export function SocialMediaList(){
             })}
 
 
+        </div>
+    )
+}
+
+export function SchoolList(){
+    return (
+        <div className="grid grid-cols-4 mx-5 gap-5 my-5">
+            {sekolah.map((skl, index) => {
+                return(
+                    <div
+                        key={index}
+                        className="bg-white border border-black/10 shadow-sm backdrop-blur-2xl rounded-md"
+                    >
+                        <Image
+                            src={skl.logo}
+                            alt=""
+                            height={450}
+                            width={200}
+                            className="mx-auto"
+                        />
+
+                        <h1 className="text-center capitalize mb-5 font-semibold text-lg">
+                            {skl.madrasah}
+                        </h1>
+
+                        <div className="mb-5 mx-5 text-end">
+                            <a href={skl.link} className="underline text-blue-900 capitalize">
+                                selengkapnya
+                            </a>
+                        </div>
+                    </div>
+                )
+            })}
         </div>
     )
 }
