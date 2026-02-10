@@ -5,6 +5,7 @@ import { NavButton } from "./button";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
 import { NavDropdown } from "./dropdown";
+import Image from "next/image";
 
 const menunav = [
     {
@@ -28,15 +29,15 @@ const menunav = [
 const organitations = [
     {
         label: 'Madrasah Ibtidaiyah (MI)',
-        link: '/organitation/MI',
+        link: '/organitation/mi',
     },
     {
         label: 'Madrasah Tsanawiyah (MTs)',
-        link: '/organitation/MTs',
+        link: '/organitation/mts',
     },
     {
         label: 'Madrasah Ibtidaiyah (MA)',
-        link: '/organitation/MA',
+        link: '/organitation/ma',
     },
 ]
 
@@ -65,10 +66,11 @@ export default function Navbar(){
                 <div className="flex h-full items-center justify-between">
                     
                     <div className="flex items-center">
-                        <img 
-                            src="img/logo1.png" 
+                        <Image
+                            src={'/img/logo1.png'}
                             alt=""
-                            className="h-16 w-auto" 
+                            height={100}
+                            width={150}
                         />
                     </div>
                     <div className="flex items-center gap-4 ">

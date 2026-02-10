@@ -2,6 +2,7 @@
 
 import Image from "next/image"
 import { InstagramGrid, TiktoGrid, YoutubeGrid } from "./social-media"
+import Link from "next/link"
 
 const sekolah = [
     {
@@ -151,9 +152,9 @@ export function SchoolList(){
                         </h1>
 
                         <div className="mb-5 mx-5 text-end">
-                            <a href={skl.link} className="underline text-blue-900 capitalize">
+                            <Link href={skl.link} className="underline text-blue-900 capitalize">
                                 selengkapnya
-                            </a>
+                            </Link>
                         </div>
                     </div>
                 )

@@ -1,7 +1,12 @@
+import Image from "next/image"
 import { FaChalkboardTeacher } from "react-icons/fa"
 import { FaLocationDot } from "react-icons/fa6"
 import { MdOutlineMuseum, MdOutlineWbSunny, MdOutlineExplore, MdOutlineCelebration } from "react-icons/md"
 import { PiStudent } from "react-icons/pi"
+
+interface ProgramCardsProps{
+    title:string
+}
 
 const informations = [
     {
@@ -21,7 +26,7 @@ const informations = [
     },
 ]
 
-const programs = [
+const programs_ma = [
     {
         title: 'mulok',
         icon: MdOutlineMuseum ,
@@ -37,6 +42,36 @@ const programs = [
     {
         title: 'Perayaan',
         icon: MdOutlineCelebration,
+    },
+]
+
+const programs_mi_mts = [
+    {
+        title: 'mulok',
+        icon: MdOutlineMuseum ,
+    },
+    {
+        title: 'sholat dhuha',
+        icon: MdOutlineWbSunny ,
+    },
+    {
+        title: 'Perayaan',
+        icon: MdOutlineCelebration,
+    },
+]
+
+const cth_4_gambar = [
+    {
+        src:'/img/profile.jpg',
+    },
+    {
+        src:'/img/profile.jpg',
+    },
+    {
+        src:'/img/profile.jpg',
+    },
+    {
+        src:'/img/profile.jpg',
     },
 ]
 
@@ -69,10 +104,18 @@ export function Information(){
     )
 }
 
-export function ProgramCards(){
+export function ProgramCards({title}:ProgramCardsProps){
+    const isMA = title === 'MA'
+    const programs = isMA
+        ? programs_ma
+        : title === 'MTs' || title === 'MI'
+        ? programs_mi_mts
+        : []
+
     return (
-        <div className="grid grid-cols-4 my-5 gap-3">
-            {programs.map((prg, index) => {
+        <div className={`grid my-5 gap-3 ${isMA ? 'grid-cols-4' : 'grid-cols-3'}`}>
+            {title === 'MA' ?
+            programs_ma.map((prg, index) => {
                 const Icon = prg.icon
                 return (
                     <div
@@ -86,6 +129,49 @@ export function ProgramCards(){
                         <h3 className="capitalize text-lg font-semibold text-center">
                             {prg.title}
                         </h3>
+                    </div>
+                )
+            }) 
+            
+            : title === 'MTs' || 'MI'?
+            programs_mi_mts.map((prg, index) => {
+                const Icon = prg.icon
+                return (
+                    <div
+                        key={index}
+                        className="mx-auto my-5"
+                    >
+                        <Icon 
+                            size={50}
+                            className="mx-auto mb-5"
+                        />
+                        <h3 className="capitalize text-lg font-semibold text-center">
+                            {prg.title}
+                        </h3>
+                    </div>
+                )
+            }) :
+            ''}
+        </div>
+    )
+}
+
+export function GalleryCards(){
+    return (
+        <div className="grid grid-cols-4 mx-10 gap-2">
+            {cth_4_gambar.map((img, index) => {
+                return (
+                    <div
+                        key={index}
+                        className="mx-auto my-5"
+                    >
+                        <Image
+                            src={img.src}
+                            alt=""
+                            height={200}
+                            width={200}
+                            className="rounded-lg"
+                        />
                     </div>
                 )
             })}

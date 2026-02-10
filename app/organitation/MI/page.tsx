@@ -1,12 +1,18 @@
-import { AboutSchool, ProgramParts } from "@/app/ui/organitation/parts";
-
+import { AboutSchool, GalleryParts, ProgramParts } from "@/app/ui/organitation/parts";
 
 export default function Page(){
     return (
         <div className="mt-20 max-w-screen">
-            <AboutSchool/>
+            <AboutSchool
+                madrasah="MI alif al-ittifaq"
+                link=""
+            />
+                
+            <ProgramParts
+                madrasah="MI"
+            />
 
-            <ProgramParts/>
+            <GalleryParts />
         </div>
     )
 }

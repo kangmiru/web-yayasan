@@ -1,26 +1,40 @@
 import Link from "next/link";
-import { ButtonA, ButtonD } from "../button";
+import { ButtonA, ButtonB, ButtonC, ButtonD } from "../button";
 import { TitleTypeD } from "../title";
-import { Information, ProgramCards } from "./cards";
+import { GalleryCards, Information, ProgramCards } from "./cards";
 import { InformationText } from "./text";
 
-export function AboutSchool(){
+interface AboutSchoolProps {
+    madrasah:string
+    link:string
+}
+
+interface ProgramPartsProps{
+    madrasah:string
+}
+
+const textMI = `MI Alif Al-ittifaq didirikan pada tahun 2008 dibangun dengan tujuan untuk membuat sebuah madrasah didalam lingkungan kampung Ciburial.
+
+Keinginan dari sesepuh yayasan al-ittifaq yakni alm. KH. Fuad Affandi agar dapat menyediakan pendidikan bagi masyarakat dan santri disekitar desa Alamendah.`
+
+
+export function AboutSchool({madrasah, link}:AboutSchoolProps){
     return (
-        <div className="bg-white mt-10 mx-10">
-            <TitleTypeD title="tentang madrasah" />
+        <div className="bg-sky-100 p-10 rounded-sm">
+            <TitleTypeD title={`tentang ${madrasah}`} />
 
             <div className="grid grid-cols-3 my-5 gap-5 items-start">
                 <div className="col-span-2">
-                    <InformationText 
-                        text="yayasan kami menyediakan 4 jenjang pendidikan dimulai dari tingkat RA setingkat TK, MI setingkat SD, MTs setingkat SMP, dan MA setingkat SMA. Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo, explicabo?"
-                    />
-                    <InformationText 
-                        text="Madrasah kami juga mendapatkan akreditasi B untuk tingkat RA, akreditasi B untuk tingkat RA, akreditasi A untuk tingkat MTs, dan akreditasi A untuk tingkat MA. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Velit, recusandae fugit provident consectetur sunt vero ut libero nam, sequi nihil temporibus dolores necessitatibus porro incidunt saepe nisi veniam similique dolorum iure! Quo voluptas vero facere sint quis delectus molestias nesciunt, nostrum deserunt provident, hic sed sapiente deleniti accusamus temporibus aut?"
-                    />
+                    {madrasah === 'MI alif al-ittifaq' ?
+                        <InformationText 
+                            text={textMI}
+                        />
+                        : ''
+                    }
 
                     <div className="flex gap-3 items-center">
-                        <ButtonA title="Daftar sekarang" link=""/>
-                        <ButtonD title="unduh brosur" link="" />
+                        <ButtonA title="Daftar sekarang" link={link}/>
+                        <ButtonD title="unduh brosur" link={link} />
                     </div>
                 </div>
 
@@ -35,15 +49,36 @@ export function AboutSchool(){
     )
 }
 
-export function ProgramParts(){
+export function ProgramParts({madrasah}:ProgramPartsProps){
     return (
-        <div className="m-10">
+        <div className="px-10 py-5 rounded-sm">
             <div className="text-center">
                 <TitleTypeD title="program unggulan madrasah"/>
             </div>
 
-            <ProgramCards/>
+            <ProgramCards
+                title={madrasah}
+            />
 
+        </div>
+    )
+}
+
+export function GalleryParts(){
+    return(
+        <div className="px-10 py-5 bg-sky-100 rounded-sm">
+            <div className="text-center">
+                <TitleTypeD title="galeri & aktivitas siswa" />
+            </div>
+
+            <GalleryCards/>
+
+            <div className="mx-20 my-5 text-center">
+                <ButtonA 
+                    title="Selengkapnya"
+                    link=""
+                />
+            </div>
         </div>
     )
 }
