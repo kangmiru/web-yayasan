@@ -7,7 +7,7 @@ import Link from "next/link"
 const sekolah = [
     {
         madrasah: 'RA Alif Al-ittifaq',
-        tingkat: 'Pendidikan setingkat SD/MI',
+        tingkat: 'Pendidikan setingkat TK',
         visi: 'dengan pendidikan yang islami mencetak siswa-siswi yang mandiri dan berbudi pekerti luhur',
         logo: '/img/logo2.png',
         link: '/organitation/ra',
@@ -15,7 +15,7 @@ const sekolah = [
     },
     {
         madrasah: 'MI Alif Al-ittifaq',
-        tingkat: 'Pendidikan setingkat SD/MI',
+        tingkat: 'Pendidikan setingkat SD',
         visi: 'dengan pendidikan yang islami mencetak siswa-siswi yang mandiri dan berbudi pekerti luhur',
         logo: '/img/logo2.png',
         link: '/organitation/mi',
@@ -23,15 +23,15 @@ const sekolah = [
     },
     {
         madrasah: 'MTs Alif Al-ittifaq',
-        tingkat: 'Pendidikan setingkat SD/MI',
-        visi: 'dengan pendidikan yang islami mencetak siswa-siswi yang mandiri dan berbudi pekerti luhur',
+        tingkat: 'Pendidikan setingkat SMP',
+        visi: 'Agamis Lingkungan Inofatif dan Futuristik',
         logo: '/img/logo2.png',
         link: '/organitation/mts',
         foto: '',
     },
     {
         madrasah: 'MA Alif Al-ittifaq',
-        tingkat: 'Pendidikan setingkat SD/MI',
+        tingkat: 'Pendidikan setingkat SMA',
         visi: 'dengan pendidikan yang islami mencetak siswa-siswi yang mandiri dan berbudi pekerti luhur',
         logo: '/img/logo2.png',
         link: '/organitation/ma',
@@ -76,9 +76,9 @@ export function OrganisationList(){
                             height={150}
                             className="items-center justify-center flex mx-auto"
                         />
-                        <h1 className="text-center text-3xl font-bold">{skl.madrasah}</h1>
+                        <h1 className="text-center lg:text-3xl font-bold md:text-xl">{skl.madrasah}</h1>
 
-                        <div className="m-5">
+                        <div className="lg:m-5 md:mt-3">
                             <hr className="my-2"/>
 
                             <p className="text-center font-normal capitalize">
@@ -94,12 +94,16 @@ export function OrganisationList(){
 
 export function SocialMediaList(){
     return(
-        <div className="grid grid-cols-3 mx-5 gap-5">
+        <div className="grid lg:grid-cols-3 mx-5 gap-5 md:grid-cols-4">
             {social_media.map((media, index) =>{
                 return(
                     <div
                         key={index} 
-                        className={`bg-white border border-black/10 shadow-sm backdrop-blur-2xl rounded-md`}
+                        className={`bg-white border border-black/10 shadow-sm backdrop-blur-2xl rounded-md ${
+                            social_media.length % 2 === 1 && index === social_media.length - 1
+                            ? 'lg:col-span-1 md:col-span-2 md:col-start-2'
+                            : 'lg:col-span-1 md:col-span-2'
+                        }`}
                     >
                         <div className="flex my-4 items-center justify-center gap-5" >
                             <Image
@@ -108,7 +112,7 @@ export function SocialMediaList(){
                                 width={35}
                                 height={35}
                             />
-                            <h2 className="text-2xl font-semibold text-blue-900 capitalize">
+                            <h2 className="lg:text-2xl font-semibold text-blue-900 capitalize md:text-xl">
                                 {media.media}
                             </h2>
                         </div>

@@ -44,8 +44,8 @@ export function HeroParts(){
 export function AboutUsParts(){
     return(
         <section className="my-10 max-w-screen rounded-sm bg-white border border-black/10 shadow-sm backdrop-blur-2xl">
-            <div className="grid grid-cols-6 gap-2 my-4">
-                <div className="col-start-1 col-end-4 mx-20">
+            <div className="grid lg:grid-cols-6 gap-2 my-4 md:grid-cols-4">
+                <div className="lg:col-start-1 lg:col-span-4 mx-20 md:col-span-3">
                     <TitleTypeA title="tentang kami"/>
 
                     <p className="tracking-wide text-md">
@@ -58,7 +58,7 @@ export function AboutUsParts(){
                     </ul>
                 </div>
                
-               <div className="col-start-5 col-end-6">
+               <div className="lg:col-start-5 lg:col-span-2 md:col-auto md:mx-5">
                     <Image
                         src={'/img/aboutus.jpg'}
                         alt=""

@@ -1,26 +1,37 @@
 import Image from "next/image";
 
+const cth_foto_ig = [
+    {
+        src:'/img/aboutus.jpg',
+    },
+    {
+        src:'/img/aboutus.jpg',
+    },
+    {
+        src:'/img/aboutus.jpg',
+    },
+]
+
 export function InstagramGrid(){
     return (
-        <div className="mx-3 my-5 flex flex-cols-3 gap-2 items-center justify-center">
-            <Image
-                src={'/img/aboutus.jpg'}
-                alt=""
-                width={130}
-                height={130}
-            />
-            <Image
-                src={'/img/aboutus.jpg'}
-                alt=""
-                width={130}
-                height={130}
-            />
-            <Image
-                src={'/img/aboutus.jpg'}
-                alt=""
-                width={130}
-                height={130}
-            />
+        <div className="mx-3 my-5 flex flex-cols gap-2 items-center justify-center">
+            {cth_foto_ig.map((img, index) => {
+                return(
+                    <div
+                        key={index}
+                        className={`${
+                            index === 2 ? 'md:hidden lg:block':''
+                        }`}
+                    >
+                        <Image
+                            src={img.src}
+                            alt=""
+                            width={130}
+                            height={130}
+                        />
+                    </div>
+                )
+            })}
         </div>
     )
 }

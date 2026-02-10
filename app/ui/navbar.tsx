@@ -19,10 +19,6 @@ const menunav = [
         menu: 'organisasi',
         link: '/organitation',
     },
-    {
-        menu: 'media sosial',
-        link: '/medsos',
-    },
 ]
 
 const organitations = [
@@ -65,7 +61,7 @@ export default function Navbar(){
                     : "bg-linear-to-b from-blue-900 via-blue-900/90"
             }`}
         >
-            <div className="mx-auto max-w-7xl px-4 lg:px-8 h-full">
+            <div className="lg:mx-auto max-w-7xl px-4 lg:px-8 h-full md:mx-10">
                 <div className="flex h-full items-center justify-between">
                     
                     <div className="flex items-center">
@@ -76,7 +72,7 @@ export default function Navbar(){
                             width={150}
                         />
                     </div>
-                    <div className="flex items-center gap-4 ">
+                    <div className="flex items-center gap-4">
                         {menunav.map((menu,index) => {
                             if (menu.menu === 'organisasi') {
                                 return (
