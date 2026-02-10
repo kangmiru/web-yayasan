@@ -1,4 +1,4 @@
-import { AboutSchool, GalleryParts, ProgramParts } from "@/app/ui/organitation/parts";
+import { AboutSchool, GalleryParts, ProgramParts, RegistrationFlowParts } from "@/app/ui/organitation/parts";
 
 export default function Page(){
     return (
@@ -13,6 +13,8 @@ export default function Page(){
             />
 
             <GalleryParts />
+
+            <RegistrationFlowParts />
         </div>
     )
 }

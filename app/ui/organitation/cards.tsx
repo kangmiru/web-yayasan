@@ -1,8 +1,12 @@
+'use client'
+
 import Image from "next/image"
-import { FaChalkboardTeacher } from "react-icons/fa"
+import { FaArrowRight, FaChalkboardTeacher } from "react-icons/fa"
 import { FaLocationDot } from "react-icons/fa6"
-import { MdOutlineMuseum, MdOutlineWbSunny, MdOutlineExplore, MdOutlineCelebration } from "react-icons/md"
+import { MdOutlineMuseum, MdOutlineWbSunny, MdOutlineExplore, MdOutlineCelebration, MdOutlineAssignment, MdOutlineCloud, MdAppRegistration } from "react-icons/md"
 import { PiStudent } from "react-icons/pi"
+import { QuestionDropdown } from "../dropdown"
+import { ButtonA, ButtonD } from "../button"
 
 interface ProgramCardsProps{
     title:string
@@ -72,6 +76,21 @@ const cth_4_gambar = [
     },
     {
         src:'/img/profile.jpg',
+    },
+]
+
+const flow_registration = [
+    {
+        icon: MdOutlineAssignment,
+        caption: 'isi formulir pendaftaran',
+    },
+    {
+        icon: MdOutlineCloud,
+        caption: 'unggah persyaratan',
+    },
+    {
+        icon: MdAppRegistration,
+        caption: 'isi formulir pendaftaran',
     },
 ]
 
@@ -175,6 +194,50 @@ export function GalleryCards(){
                     </div>
                 )
             })}
+        </div>
+    )
+}
+
+export function RegistrationCards(){
+    return (
+        <div className="grid grid-cols-3">
+            <div className="col-span-2">
+                <div className="grid grid-cols-3 items-start">
+                    {flow_registration.map((regis, index) => {
+                        const Icon = regis.icon
+                        const isLast = index === flow_registration.length - 1
+                        return(
+                            <div
+                                key={index}
+                                className="flex items-center justify-between mx-10 my-5"
+                            >
+                                {/* text + caption */}
+                                <div className="text-center mt-5">
+                                    <div className="w-15 h-15 mx-auto flex items-center justify-center rounded-md bg-sky-100">
+                                        <Icon 
+                                            size={50} 
+                                        />
+                                    </div>
+
+                                    <p className="capitalize my-5 text-lg mx-6">
+                                        {regis.caption}
+                                    </p>
+                                </div>
+
+                                {/* arrow */}
+                                {!isLast && (
+                                    <FaArrowRight size={30}/>
+                                )}
+                            </div>
+
+                        )
+                    })}
+                </div>
+            </div>
+                
+                {/* dorpdown */}
+                <QuestionDropdown/>
+
         </div>
     )
 }

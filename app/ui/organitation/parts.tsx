@@ -1,7 +1,6 @@
-import Link from "next/link";
 import { ButtonA, ButtonB, ButtonC, ButtonD } from "../button";
 import { TitleTypeD } from "../title";
-import { GalleryCards, Information, ProgramCards } from "./cards";
+import { GalleryCards, Information, ProgramCards, RegistrationCards } from "./cards";
 import { InformationText } from "./text";
 
 interface AboutSchoolProps {
@@ -78,6 +77,18 @@ export function GalleryParts(){
                     title="Selengkapnya"
                     link=""
                 />
+            </div>
+        </div>
+    )
+}
+
+export function RegistrationFlowParts(){
+    return(
+        <div className="px-10 py-5 rounded-sm">
+            <TitleTypeD title="alur pendaftaran siswa baru"/>
+
+            <div className="mt-3">
+                <RegistrationCards/>
             </div>
         </div>
     )
