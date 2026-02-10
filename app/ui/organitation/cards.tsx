@@ -3,10 +3,9 @@
 import Image from "next/image"
 import { FaArrowRight, FaChalkboardTeacher } from "react-icons/fa"
 import { FaLocationDot } from "react-icons/fa6"
-import { MdOutlineMuseum, MdOutlineWbSunny, MdOutlineExplore, MdOutlineCelebration, MdOutlineAssignment, MdOutlineCloud, MdAppRegistration } from "react-icons/md"
+import { MdOutlineMuseum, MdOutlineWbSunny, MdOutlineExplore, MdOutlineCelebration, MdOutlineAssignment, MdAppRegistration, MdOutlineCloudUpload } from "react-icons/md"
 import { PiStudent } from "react-icons/pi"
 import { QuestionDropdown } from "../dropdown"
-import { ButtonA, ButtonD } from "../button"
 
 interface ProgramCardsProps{
     title:string
@@ -85,7 +84,7 @@ const flow_registration = [
         caption: 'isi formulir pendaftaran',
     },
     {
-        icon: MdOutlineCloud,
+        icon: MdOutlineCloudUpload,
         caption: 'unggah persyaratan',
     },
     {
