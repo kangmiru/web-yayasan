@@ -3,7 +3,6 @@
 import { useEffect, useState } from "react";
 import { NavButton } from "./button";
 import { usePathname } from "next/navigation";
-import Link from "next/link";
 import { NavDropdown } from "./dropdown";
 import Image from "next/image";
 
@@ -27,6 +26,10 @@ const menunav = [
 ]
 
 const organitations = [
+    {
+        label: 'Raudhotul Athfal (RA)',
+        link: '/organitation/ra',
+    },
     {
         label: 'Madrasah Ibtidaiyah (MI)',
         link: '/organitation/mi',

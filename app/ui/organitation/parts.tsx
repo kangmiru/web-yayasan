@@ -12,7 +12,19 @@ interface ProgramPartsProps{
     madrasah:string
 }
 
+const textRA = `RA Alif Al-ittifaq didirikan pada tahun 2008 dibangun dengan tujuan untuk membuat sebuah madrasah didalam lingkungan kampung Ciburial.
+
+Keinginan dari sesepuh yayasan al-ittifaq yakni alm. KH. Fuad Affandi agar dapat menyediakan pendidikan bagi masyarakat dan santri disekitar desa Alamendah.`
+
 const textMI = `MI Alif Al-ittifaq didirikan pada tahun 2008 dibangun dengan tujuan untuk membuat sebuah madrasah didalam lingkungan kampung Ciburial.
+
+Keinginan dari sesepuh yayasan al-ittifaq yakni alm. KH. Fuad Affandi agar dapat menyediakan pendidikan bagi masyarakat dan santri disekitar desa Alamendah.`
+
+const textMTs = `MI Alif Al-ittifaq didirikan pada tahun 2008 dibangun dengan tujuan untuk membuat sebuah madrasah didalam lingkungan kampung Ciburial.
+
+Keinginan dari sesepuh yayasan al-ittifaq yakni alm. KH. Fuad Affandi agar dapat menyediakan pendidikan bagi masyarakat dan santri disekitar desa Alamendah.`
+
+const textMA = `MI Alif Al-ittifaq didirikan pada tahun 2008 dibangun dengan tujuan untuk membuat sebuah madrasah didalam lingkungan kampung Ciburial.
 
 Keinginan dari sesepuh yayasan al-ittifaq yakni alm. KH. Fuad Affandi agar dapat menyediakan pendidikan bagi masyarakat dan santri disekitar desa Alamendah.`
 
@@ -27,6 +39,18 @@ export function AboutSchool({madrasah, link}:AboutSchoolProps){
                     {madrasah === 'MI alif al-ittifaq' ?
                         <InformationText 
                             text={textMI}
+                        />
+                        : madrasah === 'RA alif al-ittifaq' ?
+                        <InformationText 
+                            text={textRA}
+                        />
+                        : madrasah === 'MTs alif al-ittifaq' ?
+                        <InformationText 
+                            text={textMTs}
+                        />
+                        : madrasah === 'MA alif al-ittifaq' ?
+                        <InformationText 
+                            text={textMA}
                         />
                         : ''
                     }
