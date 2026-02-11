@@ -54,7 +54,7 @@ export function ButtonB(){
 
 export function ButtonC(){
     return(
-        <button className= "bg-linear-to-t from-green-700/70 to-green-500 w-full rounded-md">
+        <button className= "bg-linear-to-t from-green-700/70 to-green-500 w-full rounded-md hover:bg-green-600 hover:cursor-pointer">
             <p className="text-white font-bold capitalize m-3">
                 Kirim pesan ke admin
             </p>
