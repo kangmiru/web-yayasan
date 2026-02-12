@@ -48,11 +48,11 @@ const visiMisi = [
 
 export function DraftAboutUs(){
     return(
-        <div className="max-w-screen">
+        <div className="w-full">
             <TitleTypeC title="siapa kami" />
             
-            <div className="flex flex-cols-2 ">
-                <div className="mx-10 rounded-md indent-4 text-justify justify-center">
+            <div className="grid md:grid-cols-3">
+                <div className="mx-10 rounded-md indent-4 text-justify justify-center col-span-2">
                     <p>
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus distinctio asperiores a suscipit sapiente temporibus sed doloremque, in modi accusantium illo veniam, quod assumenda quidem perferendis illum provident, porro sint non maiores aliquid nemo delectus optio veritatis. Repudiandae vel, iure nam accusamus quasi vitae ratione eum exercitationem minus nesciunt placeat!
                     </p>
@@ -61,7 +61,7 @@ export function DraftAboutUs(){
                     </p>
                     <VisiMisiParts /> 
                 </div>
-                <div className="mx-5 w-full justify-center mb-5">
+                <div className="md:mx-5 mx-10 w-full justify-center mb-5">
                     <TimelineParts/>
                 </div>
             </div>
@@ -97,7 +97,7 @@ export function TimelineParts(){
 
 export function VisiMisiParts(){
     return(
-        <div className="grid grid-cols-2 justify-center items-center text-center my-5">
+        <div className="grid md:grid-cols-2 justify-center items-center text-center mt-5 mb-10">
             {visiMisi.map((vm, index) =>{
                 return (
                     <VisiMisi 

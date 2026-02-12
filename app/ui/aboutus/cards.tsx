@@ -93,7 +93,7 @@ export function VisiMisi({logo, title, text}:VisiMisiProps){
 
 export function Values(){
     return (
-        <div className="grid grid-cols-4 mx-10">
+        <div className="grid md:grid-cols-4 mx-10">
             {values.map((value, index) => {
                 const Icon = value.logo
                 return (
@@ -120,7 +120,7 @@ export function Values(){
 
 export function TeamCards(){
     return (
-        <div className="grid grid-cols-4 mx-10">
+        <div className="grid lg:grid-cols-4 md:grid-cols-2 mx-10">
             {teams.map((team,index)=> {
                 return(
                     <div
@@ -154,7 +154,7 @@ export function TeamCards(){
 
 export function GraduateCards(){
     return (
-        <div className="grid grid-cols-4 gap-3 mx-10">
+        <div className="grid lg:grid-cols-4 md:grid-cols-2 gap-5 md:gap-3 mx-10">
             {graduates.map((grad,index) => {
                 return (
                     <div 
