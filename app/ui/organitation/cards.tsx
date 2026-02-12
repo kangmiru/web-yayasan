@@ -11,20 +11,79 @@ interface ProgramCardsProps{
     title:string
 }
 
+interface InformationProps {
+    title: string
+    label: string
+}
+
 const informations = [
     {
         title: 'Lokasi',
-        info: 'kab.bandung, jawa barat',
+        info: 'kp.ciburial 03/10, ds. alamendah',
         icon: FaLocationDot,
     },
     {
         title: 'jumlah guru',
-        info: '30',
+        info: '20',
         icon: FaChalkboardTeacher ,
     },
     {
         title: 'jumlah siswa',
-        info: '600',
+        info: '90',
+        icon: PiStudent,
+    },
+]
+
+const informations_mts = [
+    {
+        title: 'Lokasi',
+        info: 'kp. ciburial 03/10, ds. alamendah',
+        icon: FaLocationDot,
+    },
+    {
+        title: 'jumlah guru',
+        info: '34',
+        icon: FaChalkboardTeacher ,
+    },
+    {
+        title: 'jumlah siswa',
+        info: '274',
+        icon: PiStudent,
+    },
+]
+
+const informations_mi = [
+    {
+        title: 'Lokasi',
+        info: 'kp. ciburial 04/10, ds.alamendah',
+        icon: FaLocationDot,
+    },
+    {
+        title: 'jumlah guru',
+        info: '9',
+        icon: FaChalkboardTeacher ,
+    },
+    {
+        title: 'jumlah siswa',
+        info: '60',
+        icon: PiStudent,
+    },
+]
+
+const informations_ra = [
+    {
+        title: 'Lokasi',
+        info: 'kp. ciburial 04/10, ds. alamendah',
+        icon: FaLocationDot,
+    },
+    {
+        title: 'jumlah guru',
+        info: '4',
+        icon: FaChalkboardTeacher ,
+    },
+    {
+        title: 'jumlah siswa',
+        info: '24',
         icon: PiStudent,
     },
 ]
@@ -93,10 +152,18 @@ const flow_registration = [
     },
 ]
 
-export function Information(){
+export function Information({title, label}:InformationProps){
+    const dataMap: Record<string, any[]> = {
+        ma: informations,
+        mts: informations_mts,
+        mi: informations_mi,
+        ra: informations_ra,
+    }
+
+    const selectedData =  dataMap[label] || []
     return(
         <div className="grid md:grid-cols-3">
-            {informations.map((info, index) => {
+            {selectedData.map((info, index) => {
                 const Icon = info.icon
                 return (
                     <div 

@@ -6,6 +6,7 @@ import { InformationText } from "./text";
 interface AboutSchoolProps {
     madrasah:string
     link:string
+    label:string
 }
 
 interface ProgramPartsProps{
@@ -29,7 +30,7 @@ const textMA = `MI Alif Al-ittifaq didirikan pada tahun 2008 dibangun dengan tuj
 Keinginan dari sesepuh yayasan al-ittifaq yakni alm. KH. Fuad Affandi agar dapat menyediakan pendidikan bagi masyarakat dan santri disekitar desa Alamendah.`
 
 
-export function AboutSchool({madrasah, link}:AboutSchoolProps){
+export function AboutSchool({madrasah, link, label}:AboutSchoolProps){
     return (
         <div className="bg-sky-100 p-10 rounded-sm">
             <TitleTypeD title={`tentang ${madrasah}`} />
@@ -64,7 +65,7 @@ export function AboutSchool({madrasah, link}:AboutSchoolProps){
                 
 
                 <div className="w-full rounded-sm bg-white border border-black/10 shadow-sm backdrop-blur-2xl">
-                    <Information/>
+                    <Information title={madrasah} label={label}/>
                 </div>
             </div>
 

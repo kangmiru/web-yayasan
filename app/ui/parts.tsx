@@ -43,8 +43,8 @@ export function HeroParts(){
 
 export function AboutUsParts(){
     return(
-        <section className="my-10 max-w-screen rounded-sm bg-white border border-black/10 shadow-sm backdrop-blur-2xl">
-            <div className="grid lg:grid-cols-6 gap-2 my-4 md:grid-cols-4 sm:grid-rows-2">
+        <section className="my-10 w-full rounded-sm bg-white border border-black/10 shadow-sm backdrop-blur-2xl">
+            <div className="grid lg:grid-cols-6 gap-2 my-4 md:grid-cols-4">
                 <div className="lg:col-start-1 lg:col-span-4 md:mx-20 mx-5 md:col-span-3">
                     <TitleTypeA title="tentang kami"/>
 

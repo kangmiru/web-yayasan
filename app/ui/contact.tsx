@@ -7,7 +7,17 @@ import { ButtonC } from "./button"
 const contacts = [
     {
         label:'Whatsapp',
-        nilai:'0811-1111-1111',
+        nilai:'0812-1466-4449 (Bu Devi)',
+        icon: FaWhatsapp,
+    },
+    {
+        label:'Whatsapp',
+        nilai:'0812-8689-5704 (Bu Alfi)',
+        icon: FaWhatsapp,
+    },
+    {
+        label:'Whatsapp',
+        nilai:'0859-5656-7753 (Pak Uze)',
         icon: FaWhatsapp,
     },
     {

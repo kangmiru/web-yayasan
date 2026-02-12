@@ -6,6 +6,7 @@ export default function Page(){
             <AboutSchool
                 madrasah="MI alif al-ittifaq"
                 link=""
+                label="mi"
             />
                 
             <ProgramParts
