@@ -128,3 +128,34 @@ export function QuestionDropdown(){
         </div>
     )
 }
+
+export function MobileDropdown({title, link, items}:NavDropdownProps) {
+    const [open, setOpen] = useState(false)
+    
+    return(
+        <div className="w-full">
+            <button
+                onClick={() => setOpen(!open)}
+                className="text-white font-semibold capitalize w-full text-left py-2 border-b border-white/10"
+            >
+                {title}
+            </button>
+
+            <div className={`overflow-hidden transition-all duration-300 ${
+                open ? 'max-h-40 opacity-100 mt-2' : 'max-h-0 opacity-0'
+            }`}>
+                <div className="ml-4 mt-2 space-y-2">
+                {items.map((item, index) => (
+                    <Link
+                        key={index}
+                        href={item.link}
+                        className="block text-sm text-white/80 hover:text-white"
+                    >
+                        {item.label}
+                    </Link>
+                ))}
+                </div>
+            </div>
+        </div>
+    )
+}

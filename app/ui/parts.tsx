@@ -8,7 +8,7 @@ import { TitleTypeA, TitleTypeB } from "./title";
 
 export function HeroParts(){
     return(
-        <section className="max-w-screen h-screen overflow-hidden relative rounded-sm">
+        <section className="max-w-screen h-screen overflow-hidden relative rounded-sm pt-20 md:pt-24">
 
             {/* Hero Image */}
             <Image 
@@ -23,12 +23,12 @@ export function HeroParts(){
             <div className="absolute inset-0 bg-linear-to-r from-blue-900 via-blue-900/90"></div>
 
             {/* Konten hero */}
-            <div className="relative z-10 flex h-full items-center ms-10">
-                <div className="max-w-7xl mx-auto px-6 text-white">
-                    <h1 className="capitalize text-3xl font-bold leading-9 my-4">
+            <div className="relative z-10 flex h-full items-center md:ms-10 sm:mx-10 md:mt-0 sm:mt-24">
+                <div className="md:max-w-7xl mx-auto px-6 text-white">
+                    <h1 className="capitalize md:text-3xl sm:text-xl font-bold leading-9 md:my-4">
                         kun kal kawung wa la takun kal maung
                     </h1>
-                    <p className="grid grid-cols-2 text-xl tracking-wider leading-relaxed my-4">
+                    <p className="md:grid md:grid-cols-2 text-xl tracking-wider leading-relaxed my-4">
                         Jadilah seperti kawung yang semua bagiannya dapat dimanfaatkan dan janganlah seperti macan yang hanya ditakuti dan tidak memberikan manfaat apapun
                     </p>
                     <div className="my-4 flex flex-col-2 gap-5">
