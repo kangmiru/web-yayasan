@@ -59,13 +59,13 @@ const social_media = [
 
 export function OrganisationList(){
     return(
-        <div className="grid grid-cols-3 mx-5 gap-5">
+        <div className="grid md:grid-cols-3 mx-5 gap-5">
             {sekolah.map((skl,index) => {
                 return(
                     <div 
                         key={index}
                         className={`bg-white border border-black/10 shadow-sm backdrop-blur-2xl rounded-md ${sekolah.length % 3 === 1 && index === sekolah.length - 1 
-                            ? "col-start-2"
+                            ? "md:col-start-2"
                             : ""
                         }`} 
                     >

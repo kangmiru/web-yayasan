@@ -25,7 +25,7 @@ export function HeroParts(){
             {/* Konten hero */}
             <div className="relative z-10 flex h-full items-center md:ms-10 sm:mx-10 md:mt-0 sm:mt-24">
                 <div className="md:max-w-7xl mx-auto px-6 text-white">
-                    <h1 className="capitalize md:text-3xl sm:text-xl font-bold leading-9 md:my-4">
+                    <h1 className="capitalize text-3xl font-bold leading-9 md:my-4">
                         kun kal kawung wa la takun kal maung
                     </h1>
                     <p className="md:grid md:grid-cols-2 text-xl tracking-wider leading-relaxed my-4">
@@ -44,8 +44,8 @@ export function HeroParts(){
 export function AboutUsParts(){
     return(
         <section className="my-10 max-w-screen rounded-sm bg-white border border-black/10 shadow-sm backdrop-blur-2xl">
-            <div className="grid lg:grid-cols-6 gap-2 my-4 md:grid-cols-4">
-                <div className="lg:col-start-1 lg:col-span-4 mx-20 md:col-span-3">
+            <div className="grid lg:grid-cols-6 gap-2 my-4 md:grid-cols-4 sm:grid-rows-2">
+                <div className="lg:col-start-1 lg:col-span-4 md:mx-20 mx-5 md:col-span-3">
                     <TitleTypeA title="tentang kami"/>
 
                     <p className="tracking-wide text-md">
@@ -58,7 +58,7 @@ export function AboutUsParts(){
                     </ul>
                 </div>
                
-               <div className="lg:col-start-5 lg:col-span-2 md:col-auto md:mx-5">
+               <div className="lg:col-start-5 lg:col-span-2 md:col-auto md:mx-5 mx-auto">
                     <Image
                         src={'/img/aboutus.jpg'}
                         alt=""
@@ -76,7 +76,9 @@ export function OrganitationParts(){
     return(
         <section className="my-10 max-w-screen rounded-sm bg-gray-100/50 border border-black/10 shadow-sm backdrop-blur-2xl">
             <div className="w-full mt-5">
-                <TitleTypeB title="sekolah/organisasi di bawah naungan kami"/>
+                <div className="mx-2">
+                    <TitleTypeB title="sekolah/organisasi di bawah naungan kami"/>
+                </div>
                 
                 <p className="my-5 text-md text-center font-medium">
                     Ini adalah organisasi yang bergerak bersama kami.
@@ -103,7 +105,7 @@ export function SocialMediaParts(){
 export function FooterParts(){
     return (
         <section className="max-w-screen rounded-sm bg-blue-900 border border-black/10 shadow-sm backdrop-blur-2xl">
-            <div className="grid grid-cols-3 m-5 gap-3">
+            <div className="grid md:grid-cols-3 m-5 gap-3">
                 <div className="mx-3">
                     <Image
                         src={'/img/logo1.png'}
