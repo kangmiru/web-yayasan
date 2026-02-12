@@ -13,6 +13,10 @@ interface ProgramPartsProps{
     madrasah:string
 }
 
+interface RegistrationFlowPartsProps {
+    link: string
+}
+
 const textRA = `RA Alif Al-ittifaq didirikan pada tahun 2008 dibangun dengan tujuan untuk membuat sebuah madrasah didalam lingkungan kampung Ciburial.
 
 Keinginan dari sesepuh yayasan al-ittifaq yakni alm. KH. Fuad Affandi agar dapat menyediakan pendidikan bagi masyarakat dan santri disekitar desa Alamendah.`
@@ -100,20 +104,20 @@ export function GalleryParts(){
             <div className="mx-20 my-5 text-center">
                 <ButtonA 
                     title="Selengkapnya"
-                    link=""
+                    link="https://www.instagram.com/madrasahalifofc/"
                 />
             </div>
         </div>
     )
 }
 
-export function RegistrationFlowParts(){
+export function RegistrationFlowParts({link}:RegistrationFlowPartsProps){
     return(
         <div className="px-10 py-5 rounded-sm">
             <TitleTypeD title="alur pendaftaran siswa baru"/>
 
             <div className="mt-3">
-                <RegistrationCards/>
+                <RegistrationCards link={link} />
             </div>
         </div>
     )

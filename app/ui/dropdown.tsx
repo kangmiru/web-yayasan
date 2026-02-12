@@ -16,6 +16,10 @@ interface NavDropdownProps {
     items: DropdownItem[]
 }
 
+interface QuestionDropdownProps {
+    link: string
+}
+
 const questions = [
     {
         ask:'Kapan pendaftaran dibuka?',
@@ -70,7 +74,7 @@ export function NavDropdown({title, link, items}:NavDropdownProps){
     )
 }
 
-export function QuestionDropdown(){
+export function QuestionDropdown({link}:QuestionDropdownProps){
     const [openIndex, setOpenIndex] = useState<number | null>(null)
 
     const toggle = (index:number) => {
@@ -120,7 +124,7 @@ export function QuestionDropdown(){
 
                     <ButtonA
                         title="daftar sekarang"
-                        link=""
+                        link={link}
                     />
                 </div>
 

@@ -16,6 +16,10 @@ interface InformationProps {
     label: string
 }
 
+interface RegistrationCardsProps {
+    link: string
+}
+
 const informations = [
     {
         title: 'Lokasi',
@@ -264,7 +268,7 @@ export function GalleryCards(){
     )
 }
 
-export function RegistrationCards(){
+export function RegistrationCards({link}:RegistrationCardsProps){
     return (
         <div className="grid md:grid-cols-3">
             <div className="col-span-2">
@@ -302,7 +306,7 @@ export function RegistrationCards(){
             </div>
                 
                 {/* dorpdown */}
-                <QuestionDropdown/>
+                <QuestionDropdown link={link}/>
 
         </div>
     )

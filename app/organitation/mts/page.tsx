@@ -15,7 +15,7 @@ export default function Page(){
 
             <GalleryParts />
 
-            <RegistrationFlowParts />
+            <RegistrationFlowParts link="https://forms.gle/cEzaNi6CP1Ds8L8H9"/>
         </div>
     )
 }
