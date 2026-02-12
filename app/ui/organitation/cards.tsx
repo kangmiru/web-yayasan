@@ -95,7 +95,7 @@ const flow_registration = [
 
 export function Information(){
     return(
-        <div className="grid grid-cols-3">
+        <div className="grid md:grid-cols-3">
             {informations.map((info, index) => {
                 const Icon = info.icon
                 return (
@@ -131,7 +131,7 @@ export function ProgramCards({title}:ProgramCardsProps){
         : []
 
     return (
-        <div className={`grid my-5 gap-3 ${isMA ? 'grid-cols-4' : 'grid-cols-3'}`}>
+        <div className={`grid my-5 gap-3 ${isMA ? 'md:grid-cols-4' : 'md:grid-cols-3'}`}>
             {title === 'MA' ?
             programs_ma.map((prg, index) => {
                 const Icon = prg.icon
@@ -176,7 +176,7 @@ export function ProgramCards({title}:ProgramCardsProps){
 
 export function GalleryCards(){
     return (
-        <div className="grid grid-cols-4 mx-10 gap-2">
+        <div className="grid md:grid-cols-4 mx-10 gap-2">
             {cth_4_gambar.map((img, index) => {
                 return (
                     <div
@@ -199,9 +199,9 @@ export function GalleryCards(){
 
 export function RegistrationCards(){
     return (
-        <div className="grid grid-cols-3">
+        <div className="grid md:grid-cols-3">
             <div className="col-span-2">
-                <div className="grid grid-cols-3 items-start">
+                <div className="grid md:grid-cols-3 items-start">
                     {flow_registration.map((regis, index) => {
                         const Icon = regis.icon
                         const isLast = index === flow_registration.length - 1

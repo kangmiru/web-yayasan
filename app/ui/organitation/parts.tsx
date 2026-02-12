@@ -34,7 +34,7 @@ export function AboutSchool({madrasah, link}:AboutSchoolProps){
         <div className="bg-sky-100 p-10 rounded-sm">
             <TitleTypeD title={`tentang ${madrasah}`} />
 
-            <div className="grid grid-cols-3 my-5 gap-5 items-start">
+            <div className="grid md:grid-cols-3 my-5 gap-3 md:gap-5 items-start">
                 <div className="col-span-2">
                     {madrasah === 'MI alif al-ittifaq' ?
                         <InformationText 
@@ -63,7 +63,7 @@ export function AboutSchool({madrasah, link}:AboutSchoolProps){
 
                 
 
-                <div className="max-w-screen rounded-sm bg-white border border-black/10 shadow-sm backdrop-blur-2xl">
+                <div className="w-full rounded-sm bg-white border border-black/10 shadow-sm backdrop-blur-2xl">
                     <Information/>
                 </div>
             </div>

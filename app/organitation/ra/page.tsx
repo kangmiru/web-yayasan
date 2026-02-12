@@ -2,7 +2,7 @@ import { AboutSchool, GalleryParts, ProgramParts, RegistrationFlowParts } from "
 
 export default function Page(){
     return (
-        <div className="mt-20 max-w-screen">
+        <div className="mt-20 w-full">
             <AboutSchool
                 madrasah="RA alif al-ittifaq"
                 link=""
