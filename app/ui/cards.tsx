@@ -42,17 +42,17 @@ const sekolah = [
 const social_media = [
     {
         media : 'instagram',
-        api: '',
+        api: 'https://www.instagram.com/madrasahalifofc/',
         logo: '/img/instagram.png',
     },
     {
         media : 'youtube',
-        api: '',
+        api: 'https://www.youtube.com/@alifboardingschool1126',
         logo: '/img/youtube.png',
     },
     {
         media : 'tiktok',
-        api: '',
+        api: 'https://www.tiktok.com/discover/madrasah-alif-al-ittifaq',
         logo: '/img/tiktok.png',
     },
 ]
@@ -112,9 +112,11 @@ export function SocialMediaList(){
                                 width={35}
                                 height={35}
                             />
-                            <h2 className="lg:text-2xl font-semibold text-blue-900 capitalize md:text-xl">
-                                {media.media}
-                            </h2>
+                            <Link href={media.api}>
+                                <h2 className="lg:text-2xl font-semibold text-blue-900 capitalize md:text-xl hover:text-black hover:cursor-pointer">
+                                    {media.media}
+                                </h2>
+                            </Link>
                         </div>
                         <hr className="my-5 mx-3"/>
 

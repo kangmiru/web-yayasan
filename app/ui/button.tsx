@@ -40,12 +40,14 @@ export function ButtonA({title, link}: ButtonProps){
     )
 }
 
-export function ButtonB(){
+export function ButtonB({title, link}:ButtonProps){
     return(
         <button className="text-white capitalize bg-transparent rounded-md border border-b-2 border-white hover:bg-blue-800 hover:rounded-md hover:filter hover:drop-shadow-2xl hover:border-none">
             <div className="m-3">
-                <Link href={''}>
-                    <p className="font-semibold tracking-wide">pelajari lebih lanjut</p>
+                <Link href={link}>
+                    <p className="font-semibold tracking-wide">
+                        {title}
+                    </p>
                 </Link>
             </div>
         </button>

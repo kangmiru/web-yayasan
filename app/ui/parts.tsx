@@ -33,7 +33,7 @@ export function HeroParts(){
                     </p>
                     <div className="my-4 flex flex-col-2 gap-5">
                         <ButtonA title="donasi sekarang" link=""/>
-                        <ButtonB/>
+                        <ButtonB title="pelajari lebih lanjut" link="/about-us"/>
                     </div>
                 </div>
             </div>
