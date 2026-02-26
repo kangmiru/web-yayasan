@@ -19,7 +19,7 @@ const sekolah = [
         visi: 'dengan pendidikan yang islami mencetak siswa-siswi yang mandiri dan berbudi pekerti luhur',
         logo: '/img/logo2.png',
         link: '/organitation/mi',
-        foto: '',
+        foto: '/img/mi1.png',
     },
     {
         madrasah: 'MTs Alif Al-ittifaq',
@@ -32,7 +32,7 @@ const sekolah = [
     {
         madrasah: 'MA Alif Al-ittifaq',
         tingkat: 'Pendidikan setingkat SMA',
-        visi: 'dengan pendidikan yang islami mencetak siswa-siswi yang mandiri dan berbudi pekerti luhur',
+        visi: 'agamis lingkungan inovatif dan futuristik',
         logo: '/img/logo2.png',
         link: '/organitation/ma',
         foto: '',

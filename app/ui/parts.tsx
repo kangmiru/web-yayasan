@@ -12,7 +12,7 @@ export function HeroParts(){
 
             {/* Hero Image */}
             <Image 
-                src={'/img/hero.jpg'}
+                src={'/img/aktivitas.png'}
                 alt=""
                 fill
                 className="object-cover"
