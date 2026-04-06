@@ -5,6 +5,7 @@ import { ButtonA, ButtonB } from "./button";
 import { OrganisationList, SocialMediaList } from "./cards";
 import { ContactUs, SendMessage } from "./contact";
 import { TitleTypeA, TitleTypeB } from "./title";
+import React, { useState } from "react";
 
 export function HeroParts(){
     return(
@@ -60,7 +61,7 @@ export function AboutUsParts(){
                
                <div className="lg:col-start-5 lg:col-span-2 md:col-auto md:mx-5 mx-auto">
                     <Image
-                        src={'/img/aboutus.jpg'}
+                        src={'/img/pendiri/kh_fuad.png'}
                         alt=""
                         width={300}
                         height={400}
@@ -103,6 +104,29 @@ export function SocialMediaParts(){
 }
 
 export function FooterParts(){
+    const [form, setForm] = useState({
+        nama:"",
+        email:"",
+        pesan:""
+    })
+
+    const [loading, setLoading] = useState(false)
+
+    const handleChange = (
+        e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+    ) => {
+        setForm({
+            ...form,
+            [e.target.name]: e.target.value
+        })
+    }
+
+    const handleSubmit = async (e:React.FormEvent) => {
+        e.preventDefault()
+        setLoading(true)
+
+    }
+
     return (
         <section className="max-w-screen rounded-sm bg-blue-900 border border-black/10 shadow-sm backdrop-blur-2xl">
             <div className="grid md:grid-cols-3 m-5 gap-3">
@@ -117,8 +141,8 @@ export function FooterParts(){
 
                     <hr className="text-white my-3"/>
 
-                    <p className="text-white mx-3">
-                        Kp. Ciburial 03/10, Desa Alamendah, Kec.Rancabali, Kab. Bandung, Jawa Barat
+                    <p className="text-white mx-3 capitalize">
+                        Kp. Ciburial 02/10, Desa Alamendah, Kec. Rancabali, Kab. Bandung, Jawa Barat, kode pos: 40973
                     </p>
                 </div>
 

@@ -61,7 +61,7 @@ export function DraftAboutUs(){
                     </p>
                     <VisiMisiParts /> 
                 </div>
-                <div className="md:mx-5 mx-10 w-full justify-center mb-5">
+                <div className="w-full justify-center mb-5">
                     <TimelineParts/>
                 </div>
             </div>

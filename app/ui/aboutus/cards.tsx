@@ -25,9 +25,9 @@ const values = [
 
 const teams =[
     {
-        foto:'/img/profile.jpg',
-        name: 'Lorem, ipsum.',
-        position: 'pendiri'
+        foto:'/img/pendiri/kh_fuad.png',
+        name: '(Alm) KH. Fuad Affandi',
+        position: 'pendiri yayasan'
     },
     {
         foto:'/img/profile.jpg',
