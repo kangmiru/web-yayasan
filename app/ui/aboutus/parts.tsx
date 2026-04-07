@@ -38,12 +38,17 @@ const visiMisi = [
     {
         logo:'/img/visi.png',
         title: 'visi kami',
-        text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda sint, saepe voluptatibus repudiandae rerum odio?',
+        text: 'Menjadi lembaga pendidikan yang unggul dalam membentuk generasi yang berilmu, berakhlak, dan mandiri',
     },
     {
         logo:'/img/misi.png',
         title: 'misi kami',
-        text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda sint, saepe voluptatibus repudiandae rerum odio?',
+        text: `
+        - Menyelenggarakan pendidikan yang berkualitas dan berorientasi masa depan 
+        - Mengintegrasikan ilmu pengetahuan dengan nilai-nilai keislaman 
+        - Mengembangkan potensi peserta didik secara optimal 
+        - Membangun budaya belajar yang inovatif dan berkelanjutan
+        `,
     },
 ]
 
@@ -82,8 +87,8 @@ Nilai-nilai ini menjadi ciri khas yang membedakan sistem pendidikan di lingkunga
 Dengan pengalaman panjang dan fondasi nilai yang kuat, Yayasan Al-Ittifaq Bandung terus berkomitmen untuk menjadi bagian penting dalam mencetak generasi yang tidak hanya cerdas secara intelektual, tetapi juga memiliki integritas dan kepedulian sosial yang tinggi.
 `;
 
-const formattedText = (text:string): React.ReactNode => {
-    const lines = aboutUs.split('\n').map(line => line.trim());
+export const formattedText = (text:string): React.ReactNode => {
+    const lines = text.split('\n').map(line => line.trim());
     const elements: JSX.Element[] = []
     let currentList: string[] = []
 

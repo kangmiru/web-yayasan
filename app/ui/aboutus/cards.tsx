@@ -3,6 +3,7 @@ import { FaHeart } from "react-icons/fa";
 import { FaPeopleGroup } from "react-icons/fa6";
 import { MdHandshake } from "react-icons/md";
 import { PiPlantFill } from "react-icons/pi";
+import { formattedText } from "./parts";
 
 const values = [
     {
@@ -85,7 +86,7 @@ export function VisiMisi({logo, title, text}:VisiMisiProps){
                 {title}
             </h3>
             <p className="">
-                {text}
+                {formattedText(text)}
             </p>
         </div>
     )
