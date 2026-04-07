@@ -37,13 +37,13 @@ const teams =[
     },
     {
         foto:'/img/profile.jpg',
-        name: 'Lorem, ipsum.',
-        position: 'pendiri'
+        name: 'H. Agus Setia, S.Pd.,Mm.Pd',
+        position: 'Ketua Yayasan'
     },
     {
         foto:'/img/profile.jpg',
-        name: 'Lorem, ipsum.',
-        position: 'pendiri'
+        name: 'Hj. Neti Hasanah, M.Pd',
+        position: 'Sekretaris Yayasan'
     },
 ]
 
