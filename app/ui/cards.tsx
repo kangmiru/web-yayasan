@@ -27,7 +27,7 @@ const sekolah = [
         visi: 'Agamis Lingkungan Inofatif dan Futuristik',
         logo: '/img/logo2.png',
         link: '/organitation/mts',
-        foto: '/img/sekolah/mi.png',
+        foto: '/img/sekolah/mts_gd.png',
     },
     {
         madrasah: 'MA Alif Al-ittifaq',
@@ -35,7 +35,7 @@ const sekolah = [
         visi: 'agamis lingkungan inovatif dan futuristik',
         logo: '/img/logo2.png',
         link: '/organitation/ma',
-        foto: '/img/sekolah/mi.png',
+        foto: '/img/sekolah/ma_gd.png',
     },
 ]
 
@@ -146,11 +146,11 @@ export function SchoolList(){
                         className="bg-white border border-black/10 shadow-sm backdrop-blur-2xl rounded-md"
                     >
                         <Image
-                            src={skl.logo}
+                            src={skl.foto}
                             alt=""
-                            height={450}
-                            width={200}
-                            className="mx-auto"
+                            height={300}
+                            width={300}
+                            className="items-center justify-center flex mx-auto my-3 rounded-md"
                         />
 
                         <h1 className="text-center capitalize mb-5 font-semibold text-lg">
