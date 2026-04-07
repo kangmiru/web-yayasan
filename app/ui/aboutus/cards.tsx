@@ -85,9 +85,9 @@ export function VisiMisi({logo, title, text}:VisiMisiProps){
             <h3 className="capitalize text-lg font-extrabold">
                 {title}
             </h3>
-            <p className="">
-                {formattedText(text)}
-            </p>
+            
+            {formattedText(text)}
+        
         </div>
     )
 }
