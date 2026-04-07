@@ -6,6 +6,7 @@ import { OrganisationList, SocialMediaList } from "./cards";
 import { ContactUs, SendMessage } from "./contact";
 import { TitleTypeA, TitleTypeB } from "./title";
 import React, { useState } from "react";
+import { easeOut, motion } from "framer-motion";
 
 const aboutUs =`
 Yayasan Al-Ittifaq Bandung merupakan lembaga yang berfokus pada pengelolaan dan pengembangan pendidikan, dengan akar sejarah yang panjang sejak tahun 1934
@@ -33,7 +34,12 @@ export function HeroParts(){
 
             {/* Konten hero */}
             <div className="relative z-10 flex h-full items-center md:ms-10 sm:mx-10 md:mt-0 sm:mt-24">
-                <div className="md:max-w-7xl mx-auto px-6 text-white">
+                <motion.div 
+                    className="md:max-w-7xl mx-auto px-6 text-white"
+                    initial={{opacity:0, x:-100}}
+                    animate={{opacity:1, x:0}}
+                    transition={{duration:0.8, ease:'easeOut'}}
+                >
                     <h1 className="capitalize text-3xl font-bold leading-9 md:my-4">
                         kun kal kawung wa la takun kal maung
                     </h1>
@@ -44,7 +50,7 @@ export function HeroParts(){
                         <ButtonA title="donasi sekarang" link=""/>
                         <ButtonB title="pelajari lebih lanjut" link="/about-us"/>
                     </div>
-                </div>
+                </motion.div>
             </div>
         </section>
     )
@@ -54,7 +60,14 @@ export function AboutUsParts(){
     return(
         <section className="my-10 w-full rounded-sm bg-white border border-black/10 shadow-sm backdrop-blur-2xl">
             <div className="grid lg:grid-cols-6 gap-2 my-4 md:grid-cols-4">
-                <div className="lg:col-start-1 lg:col-span-4 md:mx-20 mx-5 md:col-span-3">
+
+                <motion.div 
+                    className="lg:col-start-1 lg:col-span-4 md:mx-20 mx-5 md:col-span-3"
+                    initial={{opacity:0, y:50}}
+                    whileInView={{opacity:1, y:0}}
+                    transition={{duration:0.7}}
+                    viewport={{once:true}}
+                >
                     <TitleTypeA title="tentang kami"/>
 
                     <p className="tracking-wide text-md whitespace-pre-line">
@@ -65,9 +78,15 @@ export function AboutUsParts(){
                         <ButtonA title="selengkapnya" link="/about-us"/>
                     </div>
                     
-                </div>
+                </motion.div>
                
-               <div className="lg:col-start-5 lg:col-span-2 md:col-auto md:mx-5 mx-auto">
+                <motion.div 
+                    className="lg:col-start-5 lg:col-span-2 md:col-auto md:mx-5 mx-auto"
+                    initial={{opacity:0, y:50}}
+                    whileInView={{opacity:1, y:0}}
+                    transition={{duration:0.7}}
+                    viewport={{once:true}}
+                >
                     <Image
                         src={'/img/pendiri/kh_fuad.png'}
                         alt=""
@@ -75,7 +94,7 @@ export function AboutUsParts(){
                         height={400}
                         className="rounded-sm"
                     />
-               </div>
+                </motion.div>
             </div>
         </section>
     )
@@ -84,7 +103,13 @@ export function AboutUsParts(){
 export function OrganitationParts(){
     return(
         <section className="my-10 max-w-screen rounded-sm bg-gray-100/50 border border-black/10 shadow-sm backdrop-blur-2xl">
-            <div className="w-full mt-5">
+            <motion.div 
+                className="w-full mt-5"
+                initial={{opacity:0, y:50}}
+                whileInView={{opacity:1, y:0}}
+                transition={{duration:0.7}}
+                viewport={{once:true}}
+            >
                 <div className="mx-2">
                     <TitleTypeB title="sekolah/organisasi di bawah naungan kami"/>
                 </div>
@@ -92,11 +117,17 @@ export function OrganitationParts(){
                 <p className="my-5 text-md text-center font-medium">
                     Ini adalah organisasi yang bergerak bersama kami.
                 </p>
-            </div>
+            </motion.div>
 
-            <div className="mb-5">
+            <motion.div 
+                className="mb-5"
+                initial={{opacity:0, y:50}}
+                whileInView={{opacity:1, y:0}}
+                transition={{duration:0.7}}
+                viewport={{once:true}}
+            >
                 <OrganisationList/>
-            </div>
+            </motion.div>
         </section>
     )
 }
@@ -104,9 +135,15 @@ export function OrganitationParts(){
 export function SocialMediaParts(){
     return(
         <section className="mt-10 max-w-screen rounded-sm bg-white border border-black/10 shadow-sm backdrop-blur-2xl">
-            <div className="m-5">
+            <motion.div 
+                className="m-5"
+                initial={{opacity:0, y:50}}
+                whileInView={{opacity:1, y:0}}
+                transition={{duration:0.7}}
+                viewport={{once:true}}
+            >
                 <SocialMediaList/>
-            </div>
+            </motion.div>
         </section>
     )
 }
