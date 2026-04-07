@@ -11,7 +11,7 @@ const sekolah = [
         visi: 'dengan pendidikan yang islami mencetak siswa-siswi yang mandiri dan berbudi pekerti luhur',
         logo: '/img/logo2.png',
         link: '/organitation/ra',
-        foto: '',
+        foto: '/img/sekolah/ra.png',
     },
     {
         madrasah: 'MI Alif Al-ittifaq',
@@ -19,7 +19,7 @@ const sekolah = [
         visi: 'dengan pendidikan yang islami mencetak siswa-siswi yang mandiri dan berbudi pekerti luhur',
         logo: '/img/logo2.png',
         link: '/organitation/mi',
-        foto: '/img/mi1.png',
+        foto: '/img/sekolah/mi.png',
     },
     {
         madrasah: 'MTs Alif Al-ittifaq',
@@ -27,7 +27,7 @@ const sekolah = [
         visi: 'Agamis Lingkungan Inofatif dan Futuristik',
         logo: '/img/logo2.png',
         link: '/organitation/mts',
-        foto: '',
+        foto: '/img/sekolah/mi.png',
     },
     {
         madrasah: 'MA Alif Al-ittifaq',
@@ -35,7 +35,7 @@ const sekolah = [
         visi: 'agamis lingkungan inovatif dan futuristik',
         logo: '/img/logo2.png',
         link: '/organitation/ma',
-        foto: '',
+        foto: '/img/sekolah/mi.png',
     },
 ]
 
@@ -70,11 +70,11 @@ export function OrganisationList(){
                         }`} 
                     >
                         <Image
-                            src={skl.logo}
+                            src={skl.foto}
                             alt=""
-                            width={150}
-                            height={150}
-                            className="items-center justify-center flex mx-auto"
+                            width={300}
+                            height={300}
+                            className="items-center justify-center flex mx-auto my-3 rounded-md"
                         />
                         <h1 className="text-center lg:text-3xl font-bold md:text-xl">{skl.madrasah}</h1>
 

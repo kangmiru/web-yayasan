@@ -1,11 +1,19 @@
 'use client'
 
 import Image from "next/image";
-import { ButtonA, ButtonB } from "./button";
+import { ButtonA, ButtonB, ButtonC, ButtonD } from "./button";
 import { OrganisationList, SocialMediaList } from "./cards";
 import { ContactUs, SendMessage } from "./contact";
 import { TitleTypeA, TitleTypeB } from "./title";
 import React, { useState } from "react";
+
+const aboutUs =`
+Yayasan Al-Ittifaq Bandung merupakan lembaga yang berfokus pada pengelolaan dan pengembangan pendidikan, dengan akar sejarah yang panjang sejak tahun 1934
+
+Seiring perkembangan zaman, berbagai unit seperti agribisnis, koperasi, dan pesantren telah berkembang secara mandiri di bawah yayasan yang berbeda. Hal ini menjadi bagian dari transformasi kelembagaan untuk menciptakan pengelolaan yang lebih fokus dan profesional.
+
+Saat ini, Yayasan Al-Ittifaq Bandung berkomitmen menghadirkan pendidikan yang berkualitas, berkarakter, dan berbasis nilai keislaman, guna mencetak generasi yang berilmu, berakhlak, dan mandiri.
+`
 
 export function HeroParts(){
     return(
@@ -49,14 +57,14 @@ export function AboutUsParts(){
                 <div className="lg:col-start-1 lg:col-span-4 md:mx-20 mx-5 md:col-span-3">
                     <TitleTypeA title="tentang kami"/>
 
-                    <p className="tracking-wide text-md">
-                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Assumenda aspernatur id nam autem repudiandae, quasi provident ipsa animi eaque ullam sed, ab ad cumque! Rem in asperiores id veritatis laboriosam!
+                    <p className="tracking-wide text-md whitespace-pre-line">
+                        {aboutUs}
                     </p>
-                    <ul className="tracking-wide mx-4 mt-4 text-md">
-                        <li>Lorem ipsum dolor sit amet.</li>
-                        <li>Lorem ipsum dolor sit amet.</li>
-                        <li>Lorem ipsum dolor sit amet.</li>
-                    </ul>
+
+                    <div className="my-3 text-center">
+                        <ButtonA title="selengkapnya" link="/about-us"/>
+                    </div>
+                    
                 </div>
                
                <div className="lg:col-start-5 lg:col-span-2 md:col-auto md:mx-5 mx-auto">
