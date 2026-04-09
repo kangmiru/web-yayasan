@@ -1,13 +1,22 @@
-import Image from "next/image"
+'use client'
+
 import { GraduateCards, TeamCards, Values, VisiMisi } from "./cards"
 import { TitleTypeC } from "../title"
-import React, { JSX } from "react"
+import { FormattedText } from "../animated"
+import { motion } from "framer-motion";
 
 const timelineData = [
     {
         year:'1934',
-        title:'pendirian yayasan',
-        description:'Awal berdirinya yayasan',
+        title:'perkembangan yayasan',
+        description:'Awal berkembangnya yayasan',
+        icon:'',
+        color:'',
+    },
+    {
+        year:'1997',
+        title:'berdirinya yayasan',
+        description:'Resminya yayasan Al-Ittifaq berdiri',
         icon:'',
         color:'',
     },
@@ -67,7 +76,7 @@ const visiMisi = [
 ]
 
 const aboutUs = `
-Yayasan Al-Ittifaq Bandung merupakan perjalanan panjang lembaga pendidikan yang telah tumbuh dan berkembang sejak tahun 1934 di wilayah Ciwidey, Kabupaten Bandung.
+Yayasan Al-Ittifaq Bandung merupakan perjalanan panjang lembaga pendidikan yang telah tumbuh dan berkembang sejak tahun 1934 di wilayah Ciwidey, Kabupaten Bandung. Yang resmi berdiri pada tahun 1997 didirikan oleh KH. Fuad Affandi.
 
 Seiring berjalannya waktu, lembaga ini mengalami beberapa fase perkembangan yang dinamis, mengikuti kebutuhan masyarakat dan tantangan zaman. Transformasi tersebut menjadi pondasi kuat dalam membangun sistem pendidikan yang adaptif, berkelanjutan, dan berorientasi pada kualitas.
 
@@ -101,62 +110,30 @@ Nilai-nilai ini menjadi ciri khas yang membedakan sistem pendidikan di lingkunga
 Dengan pengalaman panjang dan fondasi nilai yang kuat, Yayasan Al-Ittifaq Bandung terus berkomitmen untuk menjadi bagian penting dalam mencetak generasi yang tidak hanya cerdas secara intelektual, tetapi juga memiliki integritas dan kepedulian sosial yang tinggi.
 `;
 
-export const formattedText = (text:string): React.ReactNode => {
-    const lines = text.split('\n').map(line => line.trim());
-    const elements: JSX.Element[] = []
-    let currentList: string[] = []
-
-    lines.forEach((line, index) => {
-        if(line.startsWith('- ')) {
-            currentList.push(line.replace('- ', ''))
-        } else {
-            if (currentList.length > 0) {
-                elements.push(
-                    <ul key={`ul-${index}`} className="list-disc pl-8 mb-4 space-y-1">
-                        {currentList.map((item, i) => (
-                            <li key={i}>
-                                {item}
-                            </li>
-                        ))}
-                    </ul>
-                )
-                currentList = []
-            }
-
-            if (line !== '') {
-                elements.push(
-                    <p key={`p${index}`} className="indent-8 mb-4">
-                        {line}
-                    </p>
-                )
-            }
-        }
-    })
-
-    if (currentList.length > 0) {
-        elements.push(
-            <ul key={'ul-last'} className="list-disc pl-8 mb-4 space-y-1">
-                {currentList.map((item, i) => (
-                    <li key={i}>
-                        {item}
-                    </li>
-                ))}
-            </ul>
-        )
-    }
-    return elements
-}
-
 export function DraftAboutUs(){
     return(
         <div className="w-full">
-            <TitleTypeC title="siapa kami" />
+            <motion.div
+                initial={{opacity:0, y:50}}
+                whileInView={{opacity:1, y:0}}
+                transition={{duration:0.6}}
+                viewport={{once:true}}
+            >
+                <TitleTypeC title="siapa kami" />
+            </motion.div>
             
             <div className="grid md:grid-cols-3">
-                <div className="mx-10 rounded-md text-justify justify-center col-span-2">
-                    {formattedText(aboutUs)}
+                <motion.div 
+                    className="mx-10 rounded-md text-justify justify-center col-span-2"
+                    initial={{opacity:0, y:50}}
+                    whileInView={{opacity:1, y:0}}
+                    transition={{duration:0.7}}
+                    viewport={{once:true}}
+                >
+                    <FormattedText text={aboutUs} />
                     <VisiMisiParts /> 
-                </div>
+                </motion.div>
+
                 <div className="w-full justify-center mb-5">
                     <TimelineParts/>
                 </div>
@@ -172,17 +149,29 @@ export function TimelineParts(){
                 return(
                     <div key={index} className="mb-12 -top-5 relative">
                         {/* dot */}
-                        <span className="absolute left-0 top-1 -translate-x-1/2 w-6 h-6 bg-blue-900 rounded-full border-4 border-blue-500"/>
+                        <motion.div
+                            initial={{opacity:0, y:50}}
+                            whileInView={{opacity:1, y:0}}
+                            transition={{duration:0.7}}
+                            viewport={{once:true}}
+                        >
+                            <span className="absolute left-0 top-1 -translate-x-1/2 w-6 h-6 bg-blue-900 rounded-full border-4 border-blue-500"/>
+                        </motion.div>
 
                         {/* content */}
-                        <div className="ms-5">
+                        <motion.div 
+                            className="ms-5"
+                            initial={{opacity:0, x:100}}
+                            animate={{opacity:1, x:0}}
+                            transition={{duration:0.8, ease:'easeOut'}}
+                        >
                             <h3 className="text-xl font-bold text-gray-900">
                                 {timeline.year}
                             </h3>
                             <p className="mt-2 leading-relaxed">
                                 {timeline.description}
                             </p>
-                        </div>
+                        </motion.div>
 
                     </div>
                 )
@@ -210,32 +199,50 @@ export function VisiMisiParts(){
 
 export function OurValuesParts(){
     return (
-        <div className="m-5">
+        <motion.div 
+            className="m-5"
+            initial={{opacity:0, y:50}}
+            whileInView={{opacity:1, y:0}}
+            transition={{duration:0.7}}
+            viewport={{once:true}}
+        >
             <TitleTypeC
                 title="nilai-nilai kami"
             />
 
             <Values/>
-        </div>
+        </motion.div>
     )
 }
 
 export function FounderTeamParts(){
     return (
-        <div className="mx-5 mt-5 mb-10">
+        <motion.div 
+            className="mx-5 mt-5 mb-10"
+            initial={{opacity:0, y:50}}
+            whileInView={{opacity:1, y:0}}
+            transition={{duration:0.7}}
+            viewport={{once:true}}
+        >
             <TitleTypeC title="pendiri & tim inti" />
 
             <TeamCards/>
-        </div>
+        </motion.div>
     )
 }
 
 export function GraduationsParts(){
     return (
-        <div className="mx-5 mt-5 mb-10">
+        <motion.div 
+            className="mx-5 mt-5 mb-10"
+            initial={{opacity:0, y:50}}
+            whileInView={{opacity:1, y:0}}
+            transition={{duration:0.7}}
+            viewport={{once:true}}
+        >
             <TitleTypeC title="lulusan madrasah kami" />
 
             <GraduateCards />
-        </div>
+        </motion.div>
     )
 }

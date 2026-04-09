@@ -3,7 +3,7 @@ import { FaHeart } from "react-icons/fa";
 import { FaPeopleGroup } from "react-icons/fa6";
 import { MdHandshake } from "react-icons/md";
 import { PiPlantFill } from "react-icons/pi";
-import { formattedText } from "./parts";
+import { AnimatedNumber, FormattedText } from "../animated";
 
 const values = [
     {
@@ -86,7 +86,7 @@ export function VisiMisi({logo, title, text}:VisiMisiProps){
                 {title}
             </h3>
             
-            {formattedText(text)}
+            <FormattedText text={text} />
         
         </div>
     )
@@ -163,7 +163,7 @@ export function GraduateCards(){
                         className="grid mx-auto text-center items-center"
                     >
                         <span className="text-4xl font-extrabold tracking-wider">
-                            {grad.total}
+                            <AnimatedNumber value={grad.total}/>                            
                         </span>
                         <p className="mt-5 capitalize text-md mx-5 font-bold">
                             {grad.info}
