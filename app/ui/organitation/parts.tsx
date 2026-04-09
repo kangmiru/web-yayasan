@@ -1,7 +1,10 @@
-import { ButtonA, ButtonB, ButtonC, ButtonD } from "../button";
+'use client'
+
+import { ButtonA, ButtonD } from "../button";
 import { TitleTypeD } from "../title";
 import { GalleryCards, Information, ProgramCards, RegistrationCards } from "./cards";
 import { InformationText } from "./text";
+import { motion } from "framer-motion"
 
 interface AboutSchoolProps {
     madrasah:string
@@ -60,17 +63,28 @@ export function AboutSchool({madrasah, link, label}:AboutSchoolProps){
                         : ''
                     }
 
-                    <div className="flex gap-3 items-center">
+                    <motion.div 
+                        className="flex gap-3 items-center"
+                        initial={{opacity:0, y:50}}
+                        whileInView={{opacity:1, y:0}}
+                        transition={{duration:0.7}}
+                        viewport={{once:true}}
+                    >
                         <ButtonA title="Daftar sekarang" link={link}/>
                         <ButtonD title="unduh brosur" link={link} />
-                    </div>
+                    </motion.div>
                 </div>
 
                 
 
-                <div className="w-full rounded-sm bg-white border border-black/10 shadow-sm backdrop-blur-2xl">
+                <motion.div 
+                    className="w-full rounded-sm bg-white border border-black/10 shadow-sm backdrop-blur-2xl"
+                    initial={{opacity:0, x:100}}
+                    animate={{opacity:1, x:0}}
+                    transition={{duration:0.8, ease:'easeOut'}}
+                >
                     <Information title={madrasah} label={label}/>
-                </div>
+                </motion.div>
             </div>
 
         </div>
@@ -79,7 +93,13 @@ export function AboutSchool({madrasah, link, label}:AboutSchoolProps){
 
 export function ProgramParts({madrasah}:ProgramPartsProps){
     return (
-        <div className="px-10 py-5 rounded-sm">
+        <motion.div 
+            className="px-10 py-5 rounded-sm"
+            initial={{opacity:0, y:50}}
+            whileInView={{opacity:1, y:0}}
+            transition={{duration:0.7}}
+            viewport={{once:true}}
+        >
             <div className="text-center">
                 <TitleTypeD title="program unggulan madrasah"/>
             </div>
@@ -88,13 +108,19 @@ export function ProgramParts({madrasah}:ProgramPartsProps){
                 title={madrasah}
             />
 
-        </div>
+        </motion.div>
     )
 }
 
 export function GalleryParts(){
     return(
-        <div className="px-10 py-5 bg-sky-100 rounded-sm">
+        <motion.div 
+            className="px-10 py-5 bg-sky-100 rounded-sm"
+            initial={{opacity:0, y:50}}
+            whileInView={{opacity:1, y:0}}
+            transition={{duration:0.7}}
+            viewport={{once:true}}
+        >
             <div className="text-center">
                 <TitleTypeD title="galeri & aktivitas siswa" />
             </div>
@@ -107,18 +133,24 @@ export function GalleryParts(){
                     link="https://www.instagram.com/madrasahalifofc/"
                 />
             </div>
-        </div>
+        </motion.div>
     )
 }
 
 export function RegistrationFlowParts({link}:RegistrationFlowPartsProps){
     return(
-        <div className="px-10 py-5 rounded-sm">
+        <motion.div 
+            className="px-10 py-5 rounded-sm"
+            initial={{opacity:0, y:50}}
+            whileInView={{opacity:1, y:0}}
+            transition={{duration:0.7}}
+            viewport={{once:true}}
+        >
             <TitleTypeD title="alur pendaftaran siswa baru"/>
 
             <div className="mt-3">
                 <RegistrationCards link={link} />
             </div>
-        </div>
+        </motion.div>
     )
 }

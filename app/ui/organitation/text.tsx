@@ -1,10 +1,20 @@
+'use client'
+
+import { motion } from "framer-motion"
+
 interface InformationTextProps {
     text: string
 }
 
 export function InformationText({text}:InformationTextProps){
     return(
-        <div className="text-justify mb-5">
+        <motion.div 
+            className="text-justify mb-5"
+            initial={{opacity:0, y:50}}
+            whileInView={{opacity:1, y:0}}
+            transition={{duration:0.7}}
+            viewport={{once:true}}
+        >
             {text.split('\n\n').map((paragraph, index) => (
                 <p 
                     key={index}
@@ -12,6 +22,6 @@ export function InformationText({text}:InformationTextProps){
                     {paragraph}
                 </p>
             ))}
-        </div>
+        </motion.div>
     )
 }

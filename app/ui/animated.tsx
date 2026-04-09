@@ -1,6 +1,6 @@
 'use client'
 
-import React, { JSX, useEffect, useState } from "react"
+import React, { JSX, useEffect, useRef, useState } from "react"
 
 interface FormattedTextProps {
     text: string
@@ -58,24 +58,46 @@ export function FormattedText({text}:FormattedTextProps) : React.ReactNode{
 
 export function AnimatedNumber({value}:AnimatedNumberProps){
     const [count, setCount] = useState(0)
+    const [start, setStart] = useState(false)
+    const ref = useRef<HTMLSpanElement | null>(null)
 
     useEffect(() => {
-        let start = 0
+        const observer = new IntersectionObserver(
+            ([entry]) => {
+                if (entry.isIntersecting) {
+                    setStart(true)
+                    observer.disconnect()
+                }
+            },
+            {threshold: 0.5}
+        )
+
+        if (ref.current) observer.observe(ref.current)
+
+        return () => observer.disconnect()
+    },[])
+
+    useEffect(() => {
+        if(!start) return
+
+        let startValue = 0
         const duration = 1000
-        const increment = value / (duration / 16)
+        let startTime: number | null = null
 
-        const counter = setInterval(() => {
-            start += increment
-            if (start >= value) {
-                setCount(value)
-                clearInterval(counter)
-            } else {
-                setCount(Math.floor(start))
+        const animated = (time:number)=>{
+            if(!startTime) startTime = time
+            const progress = time - startTime
+
+            const percent = Math.min(progress / duration, 1)
+            setCount(Math.floor(percent * value))
+
+            if (percent < 1) {
+                requestAnimationFrame(animated)
             }
-        }, 16)
+        }
 
-        return () => clearInterval(counter)
-    }, [value])
+        requestAnimationFrame(animated)
+    }, [start, value])
 
-    return <span>{count}</span>
+    return <span ref={ref}>{count}</span>
 }

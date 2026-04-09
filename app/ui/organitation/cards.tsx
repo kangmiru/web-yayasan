@@ -305,8 +305,8 @@ export function RegistrationCards({link}:RegistrationCardsProps){
                 </div>
             </div>
                 
-                {/* dorpdown */}
-                <QuestionDropdown link={link}/>
+            {/* dorpdown */}
+            <QuestionDropdown link={link}/>
 
         </div>
     )

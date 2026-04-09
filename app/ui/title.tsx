@@ -28,7 +28,7 @@ export function TitleTypeC({title}:TitleProps){
 
 export function TitleTypeD({title}:TitleProps){
     return (
-        <h1 className=" capitalize text-3xl pt-10 font-semibold tracking-wide">
+        <h1 className=" capitalize text-3xl pt-5 font-semibold tracking-wide">
             {title}
         </h1>
     )
