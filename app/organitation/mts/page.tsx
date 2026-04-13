@@ -5,7 +5,7 @@ export default function Page(){
         <div className="mt-20 max-w-screen">
             <AboutSchool
                 madrasah="MTs alif al-ittifaq"
-                link=""
+                link="https://bit.ly/4t6yVwp"
                 label="mts"
             />
                 
@@ -15,7 +15,7 @@ export default function Page(){
 
             <GalleryParts />
 
-            <RegistrationFlowParts link="https://forms.gle/cEzaNi6CP1Ds8L8H9"/>
+            <RegistrationFlowParts link="https://bit.ly/4t6yVwp"/>
         </div>
     )
 }
