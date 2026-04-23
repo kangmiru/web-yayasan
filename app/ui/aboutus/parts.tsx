@@ -144,7 +144,7 @@ export function DraftAboutUs(){
 
 export function TimelineParts(){
     return (
-        <div className="relative border-l-2 border-blue-900">
+        <div className="relative border-l-2 border-blue-900 left-6 md:left-0">
             {timelineData.map((timeline,index) => {
                 return(
                     <div key={index} className="mb-12 -top-5 relative">

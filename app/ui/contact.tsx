@@ -20,11 +20,11 @@ const contacts = [
         nilai:'0859-5656-7753 (Pak Uze)',
         icon: FaWhatsapp,
     },
-    {
-        label:'Telepon',
-        nilai:'0221-1111-1111',
-        icon: BsTelephone,
-    },
+    // {
+    //     label:'Telepon',
+    //     nilai:'0221-1111-1111',
+    //     icon: BsTelephone,
+    // },
     {
         label:'Email',
         nilai:'madrasahalifofc@gmail.com',
