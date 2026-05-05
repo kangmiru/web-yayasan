@@ -7,6 +7,11 @@ import { ContactUs, SendMessage } from "./contact";
 import { TitleTypeA, TitleTypeB } from "./title";
 import React, { useState } from "react";
 import { easeOut, motion } from "framer-motion";
+import dynamic from "next/dynamic";
+
+const Map = dynamic(() => import("@/app/ui/map"), {
+  ssr: false, // 🔥 ini yang bikin aman
+});
 
 const aboutUs =`
 Yayasan Al-Ittifaq Bandung merupakan lembaga yang berfokus pada pengelolaan dan pengembangan pendidikan, dengan akar sejarah yang panjang sejak tahun 1934
@@ -195,7 +200,8 @@ export function FooterParts(){
                 <ContactUs/>
 
                 {/* Message */}
-                <SendMessage/>
+                {/* <SendMessage/> */}
+                <Map lat={-7.1315598} lng={107.4203672} />
 
             </div>
         </section>
