@@ -154,37 +154,14 @@ export function SocialMediaParts(){
 }
 
 export function FooterParts(){
-    const [form, setForm] = useState({
-        nama:"",
-        email:"",
-        pesan:""
-    })
-
-    const [loading, setLoading] = useState(false)
-
-    const handleChange = (
-        e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
-    ) => {
-        setForm({
-            ...form,
-            [e.target.name]: e.target.value
-        })
-    }
-
-    const handleSubmit = async (e:React.FormEvent) => {
-        e.preventDefault()
-        setLoading(true)
-
-    }
-
     return (
         <section className="max-w-screen rounded-sm bg-blue-900 border border-black/10 shadow-sm backdrop-blur-2xl">
             <div className="grid md:grid-cols-3 m-5 gap-3">
                 <div className="mx-3">
                     <Image
-                        src={'/img/logo1.png'}
+                        src={'/img/logo/yayasan_kanan.png'}
                         alt=""
-                        width={200}
+                        width={300}
                         height={100}
                         className="flex items-center justify-center mx-auto"
                     />
@@ -192,7 +169,7 @@ export function FooterParts(){
                     <hr className="text-white my-3"/>
 
                     <p className="text-white mx-3 capitalize">
-                        Kp. Ciburial 02/10, Desa Alamendah, Kec. Rancabali, Kab. Bandung, Jawa Barat, kode pos: 40973
+                        Kp. Ciburial RT.03/RW.10, Desa Alamendah, Kec. Rancabali, Kab. Bandung, Jawa Barat, kode pos: 40973
                     </p>
                 </div>
 

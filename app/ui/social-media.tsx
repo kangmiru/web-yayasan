@@ -2,10 +2,10 @@ import Image from "next/image";
 
 const cth_foto_ig = [
     {
-        src:'/img/aboutus.jpg',
+        src:'/img/profile.jpg',
     },
     {
-        src:'/img/aboutus.jpg',
+        src:'/img/profile.jpg',
     },
 ]
 
@@ -38,7 +38,7 @@ export function YoutubeGrid(){
         <div className="mx-3 my-5 flex gap-2 items-center justify-center">
             <div className="relative w-full max-w-xl aspect-video overflow-hidden rounded-md">
                 <Image 
-                    src={'/img/hero.jpg'}
+                    src={'/img/profile.jpg'}
                     alt=""
                     fill
                     className="object-cover"

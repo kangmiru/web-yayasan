@@ -69,11 +69,11 @@ export default function Navbar(){
                     
                     <div className="flex items-center">
                         <Image
-                            src={'/img/logo1.png'}
+                            src={'/img/logo/yayasan_bawah.png'}
                             alt=""
                             height={120}
                             width={80}
-                            className="w-24 md:w-34 h-auto"
+                            className="w-14 md:w-16 h-auto"
                         />
                     </div>
 
