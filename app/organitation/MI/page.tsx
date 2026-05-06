@@ -7,6 +7,7 @@ export default function Page(){
                 madrasah="MI alif al-ittifaq"
                 link=""
                 label="mi"
+                brosur="/maintenance"
             />
                 
             <ProgramParts
@@ -15,7 +16,7 @@ export default function Page(){
 
             <GalleryParts />
 
-            <RegistrationFlowParts link=""/>
+            <RegistrationFlowParts link="/maintenance"/>
         </div>
     )
 }

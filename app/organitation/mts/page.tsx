@@ -7,6 +7,7 @@ export default function Page(){
                 madrasah="MTs alif al-ittifaq"
                 link="https://bit.ly/4t6yVwp"
                 label="mts"
+                brosur="/maintenance"
             />
                 
             <ProgramParts

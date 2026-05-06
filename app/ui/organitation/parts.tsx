@@ -11,6 +11,7 @@ interface AboutSchoolProps {
     madrasah:string
     link:string
     label:string
+    brosur:string
 }
 
 interface ProgramPartsProps{
@@ -90,7 +91,7 @@ Didukung oleh tenaga pendidik yang profesional dan berpengalaman, serta lingkung
 Dengan semangat inovasi dan pengembangan berkelanjutan, MA Alif Al-Ittifaq Boarding School hadir sebagai pilihan tepat bagi orang tua dan siswa yang menginginkan pendidikan menengah atas yang berkualitas, berlandaskan nilai-nilai Islam, serta berorientasi pada masa depan.
 `
 
-export function AboutSchool({madrasah, link, label}:AboutSchoolProps){
+export function AboutSchool({madrasah, link, label, brosur}:AboutSchoolProps){
     return (
         <div className="bg-sky-100 p-10 rounded-sm">
             <TitleTypeD title={`tentang ${madrasah}`} />
@@ -124,7 +125,7 @@ export function AboutSchool({madrasah, link, label}:AboutSchoolProps){
                         viewport={{once:true}}
                     >
                         <ButtonA title="Daftar sekarang" link={link}/>
-                        <ButtonD title="unduh brosur" link={link} />
+                        <ButtonD title="unduh brosur" link={brosur} />
                     </motion.div>
                 </div>
 
