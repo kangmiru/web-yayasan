@@ -32,18 +32,18 @@ const teams =[
     },
     {
         foto:'/img/profile.jpg',
-        name: 'Lorem, ipsum.',
-        position: 'pendiri'
-    },
-    {
-        foto:'/img/profile.jpg',
         name: 'H. Agus Setia, S.Pd.,Mm.Pd',
         position: 'Ketua Yayasan'
     },
     {
         foto:'/img/profile.jpg',
+        name: 'Rahmadani Roudotul Janah, M. Pd',
+        position: 'Sekreteris Yayasan'
+    },
+    {
+        foto:'/img/profile.jpg',
         name: 'Hj. Neti Hasanah, M.Pd',
-        position: 'Sekretaris Yayasan'
+        position: 'Bendahara Yayasan'
     },
 ]
 

@@ -28,6 +28,13 @@ const timelineData = [
         color:'',
     },
     {
+        year:'2005',
+        title:'Berdirinya sekolah formal',
+        description:'Berdirinya sekolah formal tingkat PAUD/RA/TK',
+        icon:'',
+        color:'',
+    },
+    {
         year:'2006',
         title:'berdirinya sekolah formal',
         description:'Berdirinya sekolah formal tingkat MA/SMA',
@@ -36,13 +43,6 @@ const timelineData = [
     },
     {
         year:'2007',
-        title:'Berdirinya sekolah formal',
-        description:'Berdirinya sekolah formal tingkat PAUD/RA/TK',
-        icon:'',
-        color:'',
-    },
-    {
-        year:'2008',
         title:'Berdirinya sekolah formal',
         description:'Berdirinya sekolah formal tingkat MI/SD',
         icon:'',

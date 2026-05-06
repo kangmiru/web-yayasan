@@ -25,7 +25,7 @@ interface RegistrationFlowPartsProps {
 const textRA = `
 RA Alif Al-Ittifaq adalah lembaga pendidikan anak usia dini yang berkomitmen dalam menciptakan lingkungan belajar yang aman, menyenangkan, dan penuh kasih sayang. Kami membantu anak-anak tumbuh dan berkembang secara optimal melalui pendekatan belajar sambil bermain.
 
-Didirikan pada tahun 2007, RA Alif Al-Ittifaq hadir sebagai bentuk kepedulian terhadap pentingnya pendidikan usia dini yang berkualitas. Sejak awal, kami berfokus pada pembentukan karakter, kemandirian, serta nilai-nilai moral dan spiritual anak.
+Didirikan pada tahun 2005, RA Alif Al-Ittifaq hadir sebagai bentuk kepedulian terhadap pentingnya pendidikan usia dini yang berkualitas. Sejak awal, kami berfokus pada pembentukan karakter, kemandirian, serta nilai-nilai moral dan spiritual anak.
 
 Kami menghadirkan berbagai program unggulan seperti pembelajaran berbasis bermain, pengembangan motorik halus dan kasar, pengenalan nilai-nilai keagamaan, serta kegiatan kreatif yang dirancang untuk merangsang imajinasi dan kepercayaan diri anak.
 
@@ -41,7 +41,7 @@ Mari bergabung bersama kami dalam membentuk generasi masa depan yang cerdas, ber
 const textMI = `
 MI Alif Al-Ittifaq adalah lembaga pendidikan tingkat dasar yang berkomitmen dalam membentuk generasi yang cerdas, berakhlak mulia, dan berlandaskan nilai-nilai Islam. Dengan pendekatan pembelajaran yang aktif dan islami, kami menghadirkan lingkungan belajar yang nyaman, aman, dan penuh keberkahan bagi setiap peserta didik.
 
-Didirikan pada tahun 2008, MI Alif Al-Ittifaq hadir sebagai upaya untuk memberikan pendidikan dasar yang mengintegrasikan ilmu pengetahuan umum dengan pendidikan agama Islam. Sejak awal berdirinya, madrasah ini berkomitmen untuk mencetak generasi yang tidak hanya unggul dalam akademik, tetapi juga memiliki keimanan dan akhlak yang baik.
+Didirikan pada tahun 2007, MI Alif Al-Ittifaq hadir sebagai upaya untuk memberikan pendidikan dasar yang mengintegrasikan ilmu pengetahuan umum dengan pendidikan agama Islam. Sejak awal berdirinya, madrasah ini berkomitmen untuk mencetak generasi yang tidak hanya unggul dalam akademik, tetapi juga memiliki keimanan dan akhlak yang baik.
 
 Dalam rangka mengembangkan potensi siswa secara menyeluruh, MI Alif Al-Ittifaq menghadirkan berbagai program unggulan, di antaranya:
 - Pembiasaan ibadah harian (shalat dhuha, shalat berjamaah, ziarah)

@@ -152,7 +152,7 @@ const flow_registration = [
     },
     {
         icon: MdAppRegistration,
-        caption: 'isi formulir pendaftaran',
+        caption: 'registrasi ulang',
     },
 ]
 
