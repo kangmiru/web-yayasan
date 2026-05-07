@@ -91,6 +91,22 @@ Didukung oleh tenaga pendidik yang profesional dan berpengalaman, serta lingkung
 Dengan semangat inovasi dan pengembangan berkelanjutan, MA Alif Al-Ittifaq Boarding School hadir sebagai pilihan tepat bagi orang tua dan siswa yang menginginkan pendidikan menengah atas yang berkualitas, berlandaskan nilai-nilai Islam, serta berorientasi pada masa depan.
 `
 
+const textBoarding =`
+Boarding School Alif Al-Ittifaq merupakan bagian dari sistem pendidikan terpadu yang dirancang untuk mendukung pembinaan siswa secara menyeluruh, baik dalam aspek akademik, spiritual, karakter, maupun kemandirian. Dengan menghadirkan lingkungan belajar dan tempat tinggal yang aman, nyaman, serta bernuansa islami, boarding school menjadi sarana bagi siswa untuk tumbuh dan berkembang secara optimal di bawah pendampingan yang terarah.
+
+Program boarding school mulai dikembangkan sebagai bentuk komitmen sekolah dalam memberikan pendidikan yang lebih intensif dan berkelanjutan. Melalui sistem asrama, proses pembinaan siswa tidak hanya berlangsung saat kegiatan belajar mengajar di kelas, tetapi juga dalam kehidupan sehari-hari melalui pembiasaan disiplin, tanggung jawab, kebersamaan, serta penerapan nilai-nilai keislaman.
+
+Kehidupan di asrama dirancang dengan jadwal kegiatan yang terstruktur dan seimbang, mulai dari kegiatan ibadah berjamaah, pembelajaran akademik, pendalaman Al-Qur'an, belajar malam, hingga kegiatan pengembangan karakter dan keterampilan siswa. Dengan pola pembinaan tersebut, siswa diharapkan mampu menjadi pribadi yang mandiri, disiplin, bertanggung jawab, serta memiliki akhlakul karimah dalam kehidupan sehari-hari.
+
+Selain mendukung pembentukan karakter, boarding school juga memberikan lingkungan belajar yang lebih fokus dan kondusif. Siswa mendapatkan pendampingan langsung dari para pembina dan pengasuh asrama yang siap membimbing, mengawasi, serta memberikan perhatian terhadap perkembangan siswa, baik secara akademik maupun personal.
+
+Fasilitas asrama di Alif Al-Ittifaq dirancang untuk memberikan kenyamanan dan keamanan bagi seluruh siswa. Tersedia kamar asrama yang nyaman, ruang belajar, area ibadah, kamar mandi yang terjaga kebersihannya, serta fasilitas pendukung lainnya yang menunjang kebutuhan siswa selama tinggal di lingkungan boarding school.
+
+Tidak hanya berfokus pada pendidikan formal, boarding school juga menjadi tempat bagi siswa untuk belajar hidup bermasyarakat, menghargai perbedaan, membangun kerja sama, serta meningkatkan kepedulian sosial. Interaksi sehari-hari di lingkungan asrama menjadi pengalaman berharga dalam membentuk kedewasaan dan kemampuan bersosialisasi siswa.
+
+Dengan dukungan tenaga pendidik, pembina, dan pengasuh yang profesional serta lingkungan yang islami dan kondusif, Boarding School Alif Al-Ittifaq hadir sebagai tempat pendidikan yang tidak hanya mengembangkan kecerdasan intelektual, tetapi juga membentuk generasi yang beriman, mandiri, berdisiplin, dan siap menghadapi tantangan masa depan.
+`
+
 export function AboutSchool({madrasah, link, label, brosur}:AboutSchoolProps){
     return (
         <div className="bg-sky-100 p-10 rounded-sm">
@@ -113,6 +129,10 @@ export function AboutSchool({madrasah, link, label, brosur}:AboutSchoolProps){
                         : madrasah === 'MA alif al-ittifaq' ?
                         <InformationText 
                             text={textMA}
+                        />
+                        : madrasah === 'boarding alif al-ittifaq' ?
+                        <InformationText
+                            text={textBoarding}
                         />
                         : ''
                     }

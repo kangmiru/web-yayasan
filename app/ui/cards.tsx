@@ -37,6 +37,14 @@ const sekolah = [
         link: '/organitation/ma',
         foto: '/img/sekolah/ma_gd.png',
     },
+    {
+        madrasah: 'Boarding Alif Al-ittifaq',
+        tingkat: 'Asrama untuk tingkat MTs-MA',
+        visi: 'agamis lingkungan inovatif dan futuristik',
+        logo: '/img/logo2.png',
+        link: '/organitation/boarding',
+        foto: '/img/sekolah/ma_gd.png',
+    },
 ]
 
 const social_media = [
