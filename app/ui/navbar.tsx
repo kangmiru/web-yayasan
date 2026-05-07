@@ -40,6 +40,10 @@ const organitations = [
         label: 'Madrasah Ibtidaiyah (MA)',
         link: '/organitation/ma',
     },
+    {
+        label: 'Boarding (Asrama)',
+        link: '/organitation/boarding',
+    },
 ]
 
 export default function Navbar(){

@@ -92,6 +92,24 @@ const informations_ra = [
     },
 ]
 
+const informations_boarding = [
+    {
+        title: 'Lokasi',
+        info: 'kp. ciburial 04/10, ds. alamendah',
+        icon: FaLocationDot,
+    },
+    {
+        title: 'jumlah guru',
+        info: '4',
+        icon: FaChalkboardTeacher ,
+    },
+    {
+        title: 'jumlah siswa',
+        info: '24',
+        icon: PiStudent,
+    },
+]
+
 const programs_ma = [
     {
         title: 'mulok',
@@ -162,6 +180,7 @@ export function Information({title, label}:InformationProps){
         mts: informations_mts,
         mi: informations_mi,
         ra: informations_ra,
+        boarding: informations_boarding,
     }
 
     const selectedData =  dataMap[label] || []
