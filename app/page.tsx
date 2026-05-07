@@ -1,4 +1,4 @@
-import { AboutUsParts, FooterParts, HeroParts, OrganitationParts, SocialMediaParts } from "./ui/parts";
+import { AboutUsParts, HeroParts, OrganitationParts, SocialMediaParts } from "./ui/parts";
 
 export default function Home() {
   return (

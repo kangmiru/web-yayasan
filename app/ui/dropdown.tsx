@@ -27,7 +27,7 @@ const questions = [
     },
     {
         ask:'Berapa biaya pendaftaran?',
-        caption:'Untuk detail biaya anda dapat menghubungi admin pada nomor 0811-1111-1111 untuk informasi lebih lanjut',
+        caption:'Untuk detail biaya anda dapat menghubungi admin pada nomor 0812-1466-4449 (Bu Devi) atau 0812-8689-5704 (Bu Alfi) untuk informasi lebih lanjut',
     },
     {
         ask:'Kapan registrasi ulang dimulai?',
@@ -35,7 +35,7 @@ const questions = [
     },
     {
         ask:'Bagamana cara melakukan pendaftarannya?',
-        caption:'Pendaftaran dapat dilakukan secara online dengan mengisi form dan mendatangi langsung kantor madrasah di alamat Kp. Ciburial 04/10, Desa Alamendah, Kec. Rancabali, Kab. Bandung, Jawa Barat',
+        caption:`Pendaftaran dapat dilakukan secara online dengan mengisi form dan/atau mendatangi langsung kantor kami yang berlokasi di alamat Kp. Ciburial 04/10, Desa Alamendah, Kec. Rancabali, Kab. Bandung, Jawa Barat`,
     },
 ]
 
