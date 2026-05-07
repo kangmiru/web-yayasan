@@ -30,7 +30,7 @@ const organitations = [
     },
     {
         label: 'Madrasah Ibtidaiyah (MI)',
-        link: '/organitation/mi',
+        link: '/organitation/ibtidaiyah',
     },
     {
         label: 'Madrasah Tsanawiyah (MTs)',
