@@ -37,11 +37,12 @@ export function YoutubeGrid(){
     return (
         <div className="mx-3 my-5 flex gap-2 items-center justify-center">
             <div className="relative w-full max-w-xl aspect-video overflow-hidden rounded-md">
-                <Image 
-                    src={'/img/profile.jpg'}
-                    alt=""
-                    fill
-                    className="object-cover"
+                <iframe
+                    className="h-full w-full"
+                    src="https://www.youtube.com/embed/cqgsPUD-BwA"
+                    title="video terbaru"
+                    allow="accelerometer; autoplay; clopboard-white; encrypted-media; gyroscope; picture-to-picture"
+                    allowFullScreen
                 />
             </div>
         </div>
