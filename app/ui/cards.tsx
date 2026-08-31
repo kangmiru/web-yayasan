@@ -135,6 +135,11 @@ export function SocialMediaList(){
                             : <TiktoGrid/>
                         }
 
+                        <div className="flex justify-center items-center mb-2">
+                            <a href={media.api} className="underline capitalize my-2 underline-offset-2 text-blue-900">lihat lebih banyak</a>
+                        </div>
+
+
                     </div>
                 )
             })}
