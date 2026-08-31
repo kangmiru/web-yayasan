@@ -1,17 +1,16 @@
 import Image from "next/image";
 
 const cth_foto_ig = [
-    {
-        src:'/img/profile.jpg',
-    },
-    {
-        src:'/img/profile.jpg',
-    },
+    'https://www.instagram.com/p/DUYIpilkumE/',
+]
+
+const post_tiktok =[
+    'https://www.tiktok.com/@madrasahalifofc/video/7644801492662209810/',
 ]
 
 export function InstagramGrid(){
     return (
-        <div className="mx-3 my-5 grid grid-cols-2 gap-2 items-center justify-center">
+        <div className="mx-3 my-5 flex flex-col gap-2 items-center justify-center">
             {cth_foto_ig.map((img, index) => {
                 return(
                     <div
@@ -20,11 +19,15 @@ export function InstagramGrid(){
                             index === 2 ? 'md:hidden lg:block':''
                         }`}
                     >
-                        <Image
-                            src={img.src}
-                            alt=""
-                            fill
-                            className="object-cover"
+                        <iframe
+                            className="w-full"
+                            title="postingan terbaru"
+                            src={`${img}embed/`}
+                            height={500}
+                            style={{
+                                aspectRatio: "9 / 16",
+                            }}
+                            allow="fullscreen"
                         />
                     </div>
                 )
@@ -35,7 +38,7 @@ export function InstagramGrid(){
 
 export function YoutubeGrid(){
     return (
-        <div className="mx-3 my-5 flex gap-2 items-center justify-center">
+        <div className="mx-3 my-5 flex flex-col gap-2 items-center justify-center">
             <div className="relative w-full max-w-xl aspect-video overflow-hidden rounded-md">
                 <iframe
                     className="h-full w-full"
@@ -51,8 +54,8 @@ export function YoutubeGrid(){
 
 export function TiktoGrid(){
     return(
-        <div className="mx-3 my-5 grid grid-cols-2 gap-2 items-center justify-center">
-            {cth_foto_ig.map((img, index) => {
+        <div className="mx-3 my-5 flex flex-col gap-2 items-center justify-center">
+            {post_tiktok.map((img, index) => {
                 return(
                     <div
                         key={index}
@@ -60,11 +63,15 @@ export function TiktoGrid(){
                             index === 2 ? 'md:hidden lg:block':''
                         }`}
                     >
-                        <Image
-                            src={img.src}
-                            alt=""
-                            fill
-                            className="object-cover"
+                        <iframe
+                            className="w-full"
+                            title="postingan terbaru"
+                            src={`${img}embed/`}
+                            height={500}
+                            style={{
+                                aspectRatio: "9 / 16",
+                            }}
+                            allow="fullscreen"
                         />
                     </div>
                 )
