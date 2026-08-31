@@ -19,7 +19,7 @@ const menunav = [
     },
     {
         menu: 'organisasi',
-        link: '/organitation',
+        link: '#',
     },
 ]
 
